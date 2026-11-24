@@ -1,4 +1,4 @@
-"""Launch a reproducible development batch in Webots (Python standard library only)."""
+"""Launch a reproducible development batch in Webots. Predictive mode needs NumPy."""
 import argparse
 from datetime import datetime, timezone
 import json
@@ -15,6 +15,8 @@ ROOT = Path(__file__).resolve().parent
 
 def find_webots(explicit=None):
     candidates = [explicit, shutil.which('webots'),
+                  '/Applications/Webots.app/Contents/MacOS/webots',
+                  '/usr/local/webots/webots',
                   str(Path(os.environ.get('WEBOTS_HOME', 'C:/Program Files/Webots')) / 'msys64/ucrt64/bin/webots.exe'),
                   'C:/Program Files/Webots/msys64/mingw64/bin/webots.exe']
     for candidate in candidates:
@@ -26,6 +28,7 @@ def find_webots(explicit=None):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--scenario', choices=FAMILIES, action='append', help='Repeat to run several development cases.')
+    parser.add_argument('--planner', choices=('reactive', 'predictive'), default='reactive')
     parser.add_argument('--seed', type=int, default=0)
     parser.add_argument('--timeout', type=float, default=120.0)
     parser.add_argument('--webots')
@@ -37,7 +40,7 @@ def main():
     output = ROOT / 'results' / datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S.%fZ')
     output.mkdir(parents=True)
     config = output / 'launch_config.json'
-    config.write_text(json.dumps(dict(planner='reactive', scenarios=args.scenario or ['empty'],
+    config.write_text(json.dumps(dict(planner=args.planner, scenarios=args.scenario or ['empty'],
                                      seed=args.seed, parameters={'timeout': args.timeout},
                                      quit_on_complete=True, capture_image=args.snapshot,
                                      output_dir=str(output)), indent=2), encoding='utf-8')
@@ -51,7 +54,7 @@ def main():
     if not args.show and not args.snapshot:
         command.append('--no-rendering')
     command.append(str(ROOT / 'worlds/walkway.wbt'))
-    print(f'Running {args.scenario or ["empty"]}; results: {output}', flush=True)
+    print(f'Running {args.planner} {args.scenario or ["empty"]}; results: {output}', flush=True)
     with (output / 'webots.log').open('w', encoding='utf-8') as log:
         process = subprocess.Popen(command, env=env, cwd=ROOT, stdout=subprocess.PIPE,
                                    stderr=subprocess.STDOUT, text=True, encoding='utf-8', errors='replace')

@@ -27,6 +27,8 @@ class Observation:
     obstacles: tuple[Circle, ...]
     half_width: float
     waypoint: tuple[float, float] | None = None
+    # Stable within-trial IDs. Order may change but IDs must stay attached to people.
+    pedestrian_ids: tuple[str, ...] = ()
 
 
 @dataclass(frozen=True)

@@ -14,10 +14,16 @@ from navigation.scenarios import FAMILIES, make_scenario
 ROOT = Path(__file__).resolve().parent
 
 
-def simulate(family, seed=0, parameters=None, dt=0.064):
+def simulate(family, seed=0, parameters=None, dt=0.064, mode='reactive'):
     p = parameters or Parameters()
     scenario = make_scenario(family, seed)
-    planner = ReactivePlanner(p)
+    if mode not in ('reactive', 'predictive'):
+        raise ValueError('Unsupported planning mode')
+    if mode == 'predictive':
+        from navigation.predictive import PredictivePlanner
+        planner = PredictivePlanner(p)
+    else:
+        planner = ReactivePlanner(p)
     pose, previous, t = scenario.start, Command(), 0.0
     route = static_route((pose.x, pose.y), scenario.goal, scenario.obstacles, scenario.half_width, p)
     waypoint_index, waiting, distance = 0, 0.0, 0.0
@@ -28,7 +34,8 @@ def simulate(family, seed=0, parameters=None, dt=0.064):
         while waypoint_index < len(route)-1 and math.dist((pose.x, pose.y), route[waypoint_index]) < 0.08:
             waypoint_index += 1
         obs = Observation(t, pose, scenario.goal, pedestrians, scenario.obstacles,
-                          scenario.half_width, route[waypoint_index])
+                          scenario.half_width, route[waypoint_index],
+                          tuple(f'pedestrian_{j}' for j in range(len(pedestrians))))
         cmd = planner.command(obs, previous, dt)
         next_pose = advance(pose, cmd, dt)
         next_pedestrians = tuple(script.position(t+dt) for script in scenario.pedestrians)
@@ -48,7 +55,7 @@ def simulate(family, seed=0, parameters=None, dt=0.064):
         if math.dist((pose.x, pose.y), scenario.goal) <= p.goal_tolerance:
             outcome = 'success'
             break
-    return dict(engine='kinematic_development', family=family, seed=seed, outcome=outcome,
+    return dict(engine='kinematic_development', family=family, seed=seed, planner=mode, outcome=outcome,
                 elapsed_s=t, pose=asdict(pose), waiting_s=waiting, path_length_m=distance,
                 min_pedestrian_clearance_m=min_ped if math.isfinite(min_ped) else None,
                 min_obstacle_clearance_m=min_static,
@@ -60,12 +67,13 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--scenario', choices=FAMILIES, action='append')
     parser.add_argument('--seed', type=int, action='append', help='Repeat for several development seeds.')
+    parser.add_argument('--planner', choices=('reactive', 'predictive'), default='reactive')
     args = parser.parse_args()
     p = Parameters()
     results = []
     for seed in args.seed or [0]:
         for family in args.scenario or FAMILIES:
-            result = simulate(family, seed, p)
+            result = simulate(family, seed, p, mode=args.planner)
             results.append(result)
             print(json.dumps(result), flush=True)
     path = ROOT/'results'/('kinematic_'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S.%fZ'))

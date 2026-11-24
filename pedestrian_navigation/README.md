@@ -1,17 +1,18 @@
 # Pedestrian-aware navigation: development starter
 
-Anastasiia's implementation: Webots environment, reactive baseline, scripted
-scenarios, and logging. Sophia's predictive planner and final analysis are not
-implemented here. Everything below is development work, not held-out evaluation.
+Anastasiia's Webots environment, scripted scenarios, reactive baseline and
+logging are now connected to Sophia's ID-based velocity estimator through a
+shared velocity-sampling planning core. This is a **Python-tested integration
+draft**, not a verified predictive Webots result or final held-out evaluation.
 
-For integration with the existing repository and Sophia's separate branch,
-read [Anastasiia's handoff](../docs/ANASTASIIA_HANDOFF.md). The current standalone
-Webots planner and the existing `pednav` foundation have different interfaces
-and development parameters; a fair paired comparison requires reconciling them.
+Read [the integration guide](../docs/INTEGRATION_GUIDE_SV.md) and the
+[original Anastasiia handoff](../docs/ANASTASIIA_HANDOFF.md). The earlier
+`pednav.core` kinematic experiments use different parameters from the Webots
+controller; do not treat their outcomes as a paired Webots comparison.
 
 ## Start
 
-Requirements: Webots R2025b and Python 3.10 or newer. No pip packages are needed.
+Requirements: Webots R2025b and Python 3.10 or newer. The **predictive** mode also requires NumPy; install the repository-root `requirements.txt` with the same Python interpreter used by the Webots controller. The reactive mode uses the standard library.
 The first world load downloads the official TurtleBot3 Burger model and its
 assets from Cyberbotics. Its source commit is pinned in `worlds/walkway.wbt`.
 
@@ -22,6 +23,7 @@ python -m unittest discover -s tests -v
 python run.py --scenario empty
 python run.py --scenario static --scenario crossing --scenario oncoming --scenario stop_turn --seed 0
 python run.py --scenario crossing --show
+python run.py --planner predictive --scenario crossing --seed 3 --show
 python development.py --scenario crossing --scenario oncoming --scenario stop_turn --seed 1 --seed 2
 ```
 
@@ -53,7 +55,9 @@ launches, Webots must have a working Python command in Preferences.
   A static-map waypoint is included in each observation. Pedestrian script
   waypoints are never exposed. This shared guide avoids the symmetric-obstacle
   local minimum of goal-only scoring and must be identical for both variants.
-- `navigation/reactive.py`: the stationary pedestrian model only.
+- `navigation/reactive.py`: stationary pedestrian model.
+- `navigation/predictive.py`: uses Sophia's `pednav/sophia/estimation.py`
+  and predicts current positions forward by estimated constant velocity.
 - `navigation/planning.py`: shared velocity sampling, two-second rollout, swept
   collision checks, a command-interval-plus-braking guard, scoring, and fallback.
 - `navigation/guidance.py`: shared current-position passing preference and
@@ -66,13 +70,12 @@ launches, Webots must have a working Python command in Preferences.
   contain zero or one pedestrian. Multiple pedestrians and held-out seeds remain
   to be added and validated before the final experiment.
 
-For Sophia: subclass `VelocitySamplingPlanner`, update velocity estimates once
-per observation in a `command` wrapper, and override `pedestrian_positions(obs,
-tau)` to supply extrapolated circles. That method is queried many times per
-control update and must not update history itself. Keep the shared guidance,
-limits, sampling, scoring, buffers, and braking rules unchanged so the pedestrian
-motion model is the only experimental change. Do not import scenario scripts
-into a planner. Observation pedestrian order is stable within each current trial.
+Sophia's integrated `PredictivePlanner` subclasses `VelocitySamplingPlanner` and
+updates velocity estimates **once** per new observation. Its rollout method only
+uses the resulting cached estimate; it does not update history during trajectory
+evaluation. The Webots controller gives pedestrians stable IDs. Shared guidance,
+limits, sampling, scoring, buffers and braking remain identical for both modes.
+No scenario-script future is passed into either planner.
 
 ## Results and definitions
 

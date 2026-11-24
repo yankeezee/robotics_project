@@ -39,8 +39,9 @@ def run(supervisor):
     dt = step / 1000.0
     config_path = Path(os.environ.get('NAV_RUN_CONFIG', ROOT / 'config/development.json'))
     settings = json.loads(config_path.read_text(encoding='utf-8-sig'))
-    if settings['planner'] != 'reactive':
-        raise ValueError('Only the reactive baseline is implemented. Add the predictive module through the shared interface.')
+    planner_name = settings.get('planner', 'reactive')
+    if planner_name not in ('reactive', 'predictive'):
+        raise ValueError('planner must be reactive or predictive')
     p = Parameters(**settings.get('parameters', {}))
     if not 0 < p.max_speed <= p.wheel_radius*p.max_wheel_speed:
         raise ValueError('Invalid maximum forward speed.')
@@ -48,15 +49,19 @@ def run(supervisor):
     output = Path(settings.get('output_dir', ROOT / 'results' / identifier))
     output.mkdir(parents=True, exist_ok=True)
     (output / 'run_config.json').write_text(json.dumps({**settings, 'parameters': asdict(p)}, indent=2), encoding='utf-8')
+    # Archive both the Webots planner and the actual Sophia estimator source.
+    repo = ROOT.parent
     sources = sorted({*ROOT.glob('navigation/*.py'), *ROOT.glob('controllers/*/*.py'),
                       *ROOT.glob('tests/*.py'), *ROOT.glob('config/*.json'),
-                      *ROOT.glob('worlds/*.wbt'), ROOT/'run.py', ROOT/'development.py'})
-    manifest = {str(path.relative_to(ROOT)).replace('\\', '/'): hashlib.sha256(path.read_bytes()).hexdigest()
+                      *ROOT.glob('worlds/*.wbt'), ROOT/'run.py', ROOT/'development.py',
+                      repo/'pednav/sophia/estimation.py', repo/'pednav/sophia/interface.py',
+                      repo/'pednav/sophia/controller.py', repo/'pednav/core.py'})
+    manifest = {str(path.relative_to(repo)).replace('\\', '/'): hashlib.sha256(path.read_bytes()).hexdigest()
                 for path in sources}
     (output/'source_manifest.json').write_text(json.dumps(manifest, indent=2), encoding='utf-8')
     with zipfile.ZipFile(output/'source_snapshot.zip', 'w', zipfile.ZIP_DEFLATED) as archive:
         for path in sources:
-            archive.write(path, path.relative_to(ROOT))
+            archive.write(path, path.relative_to(repo))
     robot = supervisor.getSelf()
     translation, rotation = robot.getField('translation'), robot.getField('rotation')
     motors = [supervisor.getDevice('left wheel motor'), supervisor.getDevice('right wheel motor')]
@@ -67,7 +72,13 @@ def run(supervisor):
     summary = []
     for index, family in enumerate(settings['scenarios']):
         scenario = make_scenario(family, int(settings.get('seed', 0)))
-        planner = ReactivePlanner(p)  # Reset per-trial planner state.
+        if planner_name == 'predictive':
+            # Load the NumPy-based estimator only when it is actually requested.
+            from navigation.predictive import PredictivePlanner
+            planner = PredictivePlanner(p)
+        else:
+            planner = ReactivePlanner(p)
+        # New instance per trial resets the prediction history and passing state.
         route = static_route((scenario.start.x, scenario.start.y), scenario.goal,
                              scenario.obstacles, scenario.half_width, p)
         waypoint_index = 0
@@ -126,7 +137,8 @@ def run(supervisor):
                 while waypoint_index < len(route)-1 and math.dist((pose.x, pose.y), route[waypoint_index]) < 0.08:
                     waypoint_index += 1
                 obs = Observation(elapsed, pose, scenario.goal, pedestrians, scenario.obstacles,
-                                  scenario.half_width, route[waypoint_index])
+                                  scenario.half_width, route[waypoint_index],
+                                  tuple(f"pedestrian_{j}" for j in range(len(pedestrians))))
                 gap = clearance(pose, pedestrians, p.robot_radius)
                 obstacle_gap = min(clearance(pose, scenario.obstacles, p.robot_radius),
                                    scenario.half_width - abs(pose.y) - p.robot_radius)
@@ -159,7 +171,7 @@ def run(supervisor):
                                  diagnostic.get('mode', ''), diagnostic.get('speed_limit_m_s', ''),
                                  diagnostic.get('feasible_candidates', ''), *target])
                 observations.write(json.dumps(asdict(obs)) + '\n')
-                supervisor.setLabel(0, f'{family} | reactive | {elapsed:.1f}s | goal {goal_distance:.2f}m',
+                supervisor.setLabel(0, f'{family} | {planner_name} | {elapsed:.1f}s | goal {goal_distance:.2f}m',
                                     0.02, 0.02, 0.07, 0xFFFFFF)
                 for motor, target in zip(motors, wheel_speeds(command, p)):
                     motor.setVelocity(target)
@@ -172,7 +184,7 @@ def run(supervisor):
                 last_pose, last_pedestrians, previous = pose, pedestrians, command
                 if supervisor.step(step) == -1:
                     break
-        result = dict(scenario=family, seed=scenario.seed, planner='reactive', outcome=outcome,
+        result = dict(scenario=family, seed=scenario.seed, planner=planner_name, outcome=outcome,
                       elapsed_s=elapsed, path_length_m=distance, waiting_s=waiting,
                       min_pedestrian_clearance_m=min_pedestrian if math.isfinite(min_pedestrian) else None,
                       min_obstacle_clearance_m=min_obstacle,

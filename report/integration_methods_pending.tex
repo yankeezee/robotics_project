@@ -1,0 +1,15 @@
+% Optional paragraph for an eventual joint Webots report.
+% Integrate only after students have reviewed the implementation and references.
+\subsection{Integration of Predictive Planning in Webots}
+The reactive and predictive modes run the same Webots scene manager,
+local velocity-sampling planner, scoring function, static guidance,
+velocity limits, collision checking, and braking fallback.
+The predictive mode additionally estimates each pedestrian's velocity
+from a rolling window of previous and current position observations,
+associated by stable person identifiers. In a candidate rollout,
+the pedestrian position is extrapolated as
+\(\hat{\mathbf p}_i(t+\tau)=\mathbf p_i(t)+\hat{\mathbf v}_i(t)\tau\).
+The reactive mode instead holds \(\hat{\mathbf p}_i(t+\tau)=\mathbf p_i(t)\).
+The development implementation uses the shared Webots configuration
+with a two-second prediction horizon and a 0.064-second control step.
+% TODO: Add independently verified Webots results after local execution.
