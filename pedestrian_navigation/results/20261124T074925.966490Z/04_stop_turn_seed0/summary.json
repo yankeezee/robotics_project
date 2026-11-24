@@ -1,0 +1,18 @@
+{
+  "scenario": "stop_turn",
+  "seed": 0,
+  "planner": "reactive",
+  "outcome": "success",
+  "elapsed_s": 81.088,
+  "path_length_m": 6.202606779022759,
+  "waiting_s": 2.3680000000000017,
+  "min_pedestrian_clearance_m": 0.2573623599888204,
+  "min_obstacle_clearance_m": 0.5060919839434973,
+  "clearance_violation": false,
+  "events_reached": {
+    "pedestrian_0_stops": true,
+    "pedestrian_0_turns": true,
+    "pedestrian_0_finishes": true
+  },
+  "collision_definition": "conservative circle overlap or walkway wall overlap"
+}

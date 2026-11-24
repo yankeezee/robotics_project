@@ -1,0 +1,21 @@
+{
+  "wheel_radius": 0.033,
+  "wheel_separation": 0.16,
+  "max_wheel_speed": 6.67,
+  "robot_radius": 0.14,
+  "max_speed": 0.2,
+  "max_turn_rate": 1.5,
+  "max_acceleration": 0.35,
+  "max_angular_acceleration": 2.5,
+  "safety_margin": 0.2,
+  "horizon": 2.0,
+  "rollout_step": 0.1,
+  "goal_tolerance": 0.25,
+  "timeout": 120.0,
+  "waiting_speed": 0.01,
+  "route_buffer": 0.1,
+  "pedestrian_slowdown_distance": 1.3,
+  "pedestrian_detour_distance": 2.5,
+  "pedestrian_pass_clearance": 0.35,
+  "passing_lookahead": 0.4
+}

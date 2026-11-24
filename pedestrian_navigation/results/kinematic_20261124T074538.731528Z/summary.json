@@ -1,0 +1,53 @@
+[
+  {
+    "engine": "kinematic_development",
+    "family": "crossing",
+    "seed": 0,
+    "outcome": "success",
+    "elapsed_s": 52.92800000000004,
+    "pose": {
+      "x": 2.759263168090724,
+      "y": 0.03832068142803673,
+      "yaw": -0.1433599999999966
+    },
+    "waiting_s": 1.0880000000000005,
+    "path_length_m": 5.8102496588118475,
+    "min_pedestrian_clearance_m": 0.1549704504214583,
+    "min_obstacle_clearance_m": 0.9043203518327737,
+    "clearance_violation": true
+  },
+  {
+    "engine": "kinematic_development",
+    "family": "oncoming",
+    "seed": 0,
+    "outcome": "collision",
+    "elapsed_s": 8.832000000000006,
+    "pose": {
+      "x": -1.6808708905201355,
+      "y": -0.1809335271782737,
+      "yaw": -0.8123733333333333
+    },
+    "waiting_s": 0.6400000000000001,
+    "path_length_m": 1.3725816715844363,
+    "min_pedestrian_clearance_m": -0.015620847819160844,
+    "min_obstacle_clearance_m": 0.9790664728217263,
+    "clearance_violation": true
+  },
+  {
+    "engine": "kinematic_development",
+    "family": "stop_turn",
+    "seed": 0,
+    "outcome": "success",
+    "elapsed_s": 71.6799999999992,
+    "pose": {
+      "x": 2.8246574292000464,
+      "y": 0.17324392567399136,
+      "yaw": -0.7662933333333319
+    },
+    "waiting_s": 2.560000000000002,
+    "path_length_m": 6.209029475493161,
+    "min_pedestrian_clearance_m": 0.16421493881721105,
+    "min_obstacle_clearance_m": 0.5060081684393596,
+    "clearance_violation": true
+  }
+]
