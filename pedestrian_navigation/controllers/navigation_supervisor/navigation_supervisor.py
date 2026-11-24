@@ -1,11 +1,13 @@
 """Owns scene scripts and logging; passes only current observations to planning."""
 import csv
 import hashlib
+import importlib.metadata
 from dataclasses import asdict
 from datetime import datetime, timezone
 import json
 import math
 import os
+import platform
 from pathlib import Path
 import sys
 import traceback
@@ -20,6 +22,7 @@ from navigation.core import (Circle, Command, Observation, Parameters, Pose,
 from navigation.reactive import ReactivePlanner
 from navigation.scenarios import make_scenario
 from navigation.routing import static_route
+from tools.experiment_integrity import source_files
 
 
 def cylinder_node(name, circle, color):
@@ -51,23 +54,26 @@ def run(supervisor):
     (output / 'run_config.json').write_text(json.dumps({**settings, 'parameters': asdict(p)}, indent=2), encoding='utf-8')
     # Archive both the Webots planner and the actual Sophia estimator source.
     repo = ROOT.parent
-    sources = sorted({*ROOT.glob('navigation/*.py'), *ROOT.glob('controllers/*/*.py'),
-                      *ROOT.glob('tests/*.py'), *ROOT.glob('config/*.json'),
-                      *ROOT.glob('worlds/*.wbt'), ROOT/'run.py', ROOT/'development.py',
-                      repo/'pednav/sophia/estimation.py', repo/'pednav/sophia/interface.py',
-                      repo/'pednav/sophia/controller.py', repo/'pednav/core.py'})
+    sources = source_files(repo)
     manifest = {str(path.relative_to(repo)).replace('\\', '/'): hashlib.sha256(path.read_bytes()).hexdigest()
                 for path in sources}
     (output/'source_manifest.json').write_text(json.dumps(manifest, indent=2), encoding='utf-8')
     with zipfile.ZipFile(output/'source_snapshot.zip', 'w', zipfile.ZIP_DEFLATED) as archive:
         for path in sources:
             archive.write(path, path.relative_to(repo))
+    version_file = Path(os.environ.get('WEBOTS_HOME', 'C:/Program Files/Webots'))/'resources/version.txt'
+    environment = dict(backend='webots', webots_version=version_file.read_text().strip() if version_file.exists() else 'unknown',
+                       basic_time_step_ms=step, python_version=platform.python_version(),
+                       platform=platform.platform(), python_executable=sys.executable,
+                       packages={name: importlib.metadata.version(name) for name in ('numpy','matplotlib','Pillow','pytest')})
+    (output/'environment.json').write_text(json.dumps(environment, indent=2), encoding='utf-8')
     robot = supervisor.getSelf()
     translation, rotation = robot.getField('translation'), robot.getField('rotation')
     motors = [supervisor.getDevice('left wheel motor'), supervisor.getDevice('right wheel motor')]
     for motor in motors:
         motor.setPosition(float('inf'))
         motor.setVelocity(0)
+        motor.getPositionSensor().enable(step)
     children = supervisor.getRoot().getField('children')
     summary = []
     for index, family in enumerate(settings['scenarios']):
@@ -112,6 +118,9 @@ def run(supervisor):
         trial_dir.mkdir()
         (trial_dir / 'scenario.json').write_text(json.dumps(scenario.to_dict(), indent=2), encoding='utf-8')
         (trial_dir / 'static_route.json').write_text(json.dumps(route, indent=2), encoding='utf-8')
+        (trial_dir/'initial_state.json').write_text(json.dumps(dict(
+            position=robot.getPosition(), orientation=robot.getOrientation(), velocity=robot.getVelocity(),
+            wheel_positions=[motor.getPositionSensor().getValue() for motor in motors]), indent=2), encoding='utf-8')
         if settings.get('capture_image', False):
             supervisor.exportImage(str(trial_dir / 'scene.png'), 100)
         previous = Command()
@@ -121,7 +130,8 @@ def run(supervisor):
         min_pedestrian = min_obstacle = math.inf
         outcome = 'interrupted'
         with (trial_dir / 'trajectory.csv').open('w', newline='', encoding='utf-8') as log, \
-             (trial_dir / 'observations.jsonl').open('w', encoding='utf-8') as observations:
+             (trial_dir / 'observations.jsonl').open('w', encoding='utf-8') as observations, \
+             (trial_dir / 'planner_diagnostics.jsonl').open('w', encoding='utf-8') as diagnostics:
             writer = csv.writer(log)
             writer.writerow(['time_s', 'x_m', 'y_m', 'yaw_rad', 'speed_m_s', 'omega_rad_s',
                              'command_v_m_s', 'command_omega_rad_s', 'goal_distance_m',
@@ -171,6 +181,7 @@ def run(supervisor):
                                  diagnostic.get('mode', ''), diagnostic.get('speed_limit_m_s', ''),
                                  diagnostic.get('feasible_candidates', ''), *target])
                 observations.write(json.dumps(asdict(obs)) + '\n')
+                diagnostics.write(json.dumps(dict(time_s=elapsed, **diagnostic))+'\n')
                 supervisor.setLabel(0, f'{family} | {planner_name} | {elapsed:.1f}s | goal {goal_distance:.2f}m',
                                     0.02, 0.02, 0.07, 0xFFFFFF)
                 for motor, target in zip(motors, wheel_speeds(command, p)):

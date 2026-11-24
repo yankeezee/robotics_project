@@ -1,0 +1,7 @@
+backend,family,seed,planner,success,collision,timeout,time_s,path_m,min_clearance_m,near_margin,wait_s
+webots,crossing,3,predictive,True,False,False,54.72,5.775003024710554,0.3273648038335998,False,0.064
+webots,crossing,3,reactive,True,False,False,54.592,5.7753843218736645,0.3144757342774357,False,0.128
+webots,oncoming,3,predictive,True,False,False,35.584,6.087684518050138,0.30313793933954536,False,0.0
+webots,oncoming,3,reactive,True,False,False,35.584,6.087340593426113,0.30273109553123223,False,0.0
+webots,stop_turn,3,predictive,True,False,False,67.84,6.3619326732419355,0.3133703880420915,False,0.0
+webots,stop_turn,3,reactive,True,False,False,67.904,6.376131006048312,0.3038801491051749,False,0.0

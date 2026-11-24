@@ -1,0 +1,4 @@
+family,seed,reactive_time_s,predictive_time_s,reactive_path_m,predictive_path_m,reactive_wait_s,predictive_wait_s
+crossing,3,54.592,54.72,5.7753843218736645,5.775003024710554,0.128,0.064
+oncoming,3,35.584,35.584,6.087340593426113,6.087684518050138,0.0,0.0
+stop_turn,3,67.904,67.84,6.376131006048312,6.3619326732419355,0.0,0.0

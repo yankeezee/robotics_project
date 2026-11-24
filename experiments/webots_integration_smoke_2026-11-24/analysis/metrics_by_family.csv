@@ -1,0 +1,7 @@
+family,planner,n,success_n,success_rate,collision_n,timeout_n,clearance_violation_n,both_success_pairs,median_time_both_success_s,median_path_both_success_m,median_min_clearance_all_m,worst_min_clearance_all_m,median_wait_all_s,median_wait_both_success_s
+crossing,reactive,1,1,1.0,0,0,0,1,54.592,5.7753843218736645,0.3144757342774357,0.3144757342774357,0.128,0.128
+crossing,predictive,1,1,1.0,0,0,0,1,54.72,5.775003024710554,0.3273648038335998,0.3273648038335998,0.064,0.064
+oncoming,reactive,1,1,1.0,0,0,0,1,35.584,6.087340593426113,0.30273109553123223,0.30273109553123223,0.0,0.0
+oncoming,predictive,1,1,1.0,0,0,0,1,35.584,6.087684518050138,0.30313793933954536,0.30313793933954536,0.0,0.0
+stop_turn,reactive,1,1,1.0,0,0,0,1,67.904,6.376131006048312,0.3038801491051749,0.3038801491051749,0.0,0.0
+stop_turn,predictive,1,1,1.0,0,0,0,1,67.84,6.3619326732419355,0.3133703880420915,0.3133703880420915,0.0,0.0

@@ -38,6 +38,8 @@ class PredictivePlanner(VelocitySamplingPlanner):
         self.estimator.reset()
         self._velocities = ()
         self.passing.index, self.passing.side = None, 0
+        self._position_cache.clear()
+        self._cache_observation = None
 
     def command(self, observation, previous, dt):
         pedestrians = observation.pedestrians

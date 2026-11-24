@@ -1,12 +1,14 @@
 """Launch a reproducible development batch in Webots. Predictive mode needs NumPy."""
 import argparse
 from datetime import datetime, timezone
+from dataclasses import asdict
 import json
 import os
 from pathlib import Path
 import shutil
 import subprocess
 import sys
+from navigation.core import Parameters
 
 from navigation.scenarios import FAMILIES
 
@@ -30,18 +32,26 @@ def main():
     parser.add_argument('--scenario', choices=FAMILIES, action='append', help='Repeat to run several development cases.')
     parser.add_argument('--planner', choices=('reactive', 'predictive'), default='reactive')
     parser.add_argument('--seed', type=int, default=0)
-    parser.add_argument('--timeout', type=float, default=120.0)
+    parser.add_argument('--timeout', type=float)
+    parser.add_argument('--parameters', type=Path, help='JSON file with the shared Parameters values.')
+    parser.add_argument('--output-dir', type=Path, help='New directory for this run; existing directories are refused.')
+    parser.add_argument('--wall-timeout', type=float, default=600.0, help='Infrastructure watchdog, not simulation timeout.')
+    parser.add_argument('--port', type=int, help='Dedicated Webots port for independent concurrent instances.')
     parser.add_argument('--webots')
     parser.add_argument('--show', action='store_true', help='Show Webots while the batch runs.')
     parser.add_argument('--snapshot', action='store_true', help='Export a scene image at each trial start.')
     args = parser.parse_args()
-    if args.timeout <= 0:
-        parser.error('--timeout must be positive')
-    output = ROOT / 'results' / datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S.%fZ')
-    output.mkdir(parents=True)
+    values = json.loads(args.parameters.read_text(encoding='utf-8')) if args.parameters else {}
+    if args.timeout is not None:
+        values['timeout'] = args.timeout
+    parameters = asdict(Parameters(**values))
+    if parameters['timeout'] <= 0 or args.wall_timeout <= 0:
+        parser.error('Timeouts must be positive')
+    output = (args.output_dir or ROOT / 'results' / datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S.%fZ')).resolve()
+    output.mkdir(parents=True, exist_ok=False)
     config = output / 'launch_config.json'
     config.write_text(json.dumps(dict(planner=args.planner, scenarios=args.scenario or ['empty'],
-                                     seed=args.seed, parameters={'timeout': args.timeout},
+                                     seed=args.seed, parameters=parameters,
                                      quit_on_complete=True, capture_image=args.snapshot,
                                      output_dir=str(output)), indent=2), encoding='utf-8')
     env = os.environ.copy()
@@ -49,6 +59,8 @@ def main():
     # Webots uses the same Python interpreter as this launcher.
     env['PATH'] = str(Path(sys.executable).parent) + os.pathsep + env.get('PATH', '')
     command = [find_webots(args.webots), '--batch', '--mode=fast', '--stdout', '--stderr']
+    if args.port:
+        command.append(f'--port={args.port}')
     if not args.show:
         command.append('--minimize')
     if not args.show and not args.snapshot:
@@ -56,18 +68,19 @@ def main():
     command.append(str(ROOT / 'worlds/walkway.wbt'))
     print(f'Running {args.planner} {args.scenario or ["empty"]}; results: {output}', flush=True)
     with (output / 'webots.log').open('w', encoding='utf-8') as log:
-        process = subprocess.Popen(command, env=env, cwd=ROOT, stdout=subprocess.PIPE,
-                                   stderr=subprocess.STDOUT, text=True, encoding='utf-8', errors='replace')
+        process = subprocess.Popen(command, env=env, cwd=ROOT, stdout=log,
+                                   stderr=subprocess.STDOUT, start_new_session=os.name != 'nt')
         try:
-            for line in process.stdout:
-                print(line, end='', flush=True)
-                log.write(line)
-                log.flush()
-            code = process.wait()
-        except KeyboardInterrupt:
-            process.terminate()
+            code = process.wait(timeout=args.wall_timeout)
+        except (KeyboardInterrupt, subprocess.TimeoutExpired):
+            if os.name == 'nt':
+                subprocess.run(['taskkill', '/PID', str(process.pid), '/T', '/F'], capture_output=True)
+            else:
+                import signal
+                os.killpg(process.pid, signal.SIGTERM)
             process.wait()
             raise
+    print((output/'webots.log').read_text(encoding='utf-8', errors='replace'), end='', flush=True)
     if code:
         return code
     summary_path = output / 'summary.json'
@@ -75,6 +88,7 @@ def main():
     if not summary_path.exists() or len(json.loads(summary_path.read_text())) != len(expected):
         print('ERROR: Webots ended without completing the requested batch. Inspect webots.log.', file=sys.stderr)
         return 1
+    print('RUN_COMPLETE '+str(output), flush=True)
     return 0
 
 

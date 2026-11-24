@@ -30,3 +30,6 @@ env/
 # Local simulation output
 results/webots/
 webots/worlds/current.wbt
+
+# Raw experiment logs are retained locally and published in raw_logs.zip.
+experiments/*/raw/

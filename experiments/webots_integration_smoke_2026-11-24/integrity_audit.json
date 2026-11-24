@@ -1,0 +1,90 @@
+{
+  "trials": [
+    {
+      "family": "crossing",
+      "seed": 3,
+      "planner": "reactive",
+      "samples": 854,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 3,
+      "planner": "predictive",
+      "samples": 856,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 3,
+      "planner": "reactive",
+      "samples": 557,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 3,
+      "planner": "predictive",
+      "samples": 557,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 3,
+      "planner": "reactive",
+      "samples": 1062,
+      "max_pedestrian_script_error_m": 1.4432899320127035e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 3,
+      "planner": "predictive",
+      "samples": 1061,
+      "max_pedestrian_script_error_m": 1.4432899320127035e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    }
+  ],
+  "pairs": [
+    {
+      "family": "crossing",
+      "seed": 3,
+      "scenario_sha256": "a80fd8aea511836783dd34b8f7b3664e632db526aea835ab3acd118a4ea6ba7d",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 3,
+      "scenario_sha256": "bc7986635eae98cbcc4618f5574b4fe777887d7ddefe6cefe88bdcea56132fef",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 3,
+      "scenario_sha256": "256a21654abde69721d095a33c395751dde7c0057f7102612c97f9127bfeb419",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    }
+  ],
+  "source_manifest_signature": "c64bb8b52fc5a94bd5a04875218d6c5db171063a0c122ed5d6d77ae1e258be46",
+  "max_initial_state_difference": 0.0,
+  "all_raw_metrics_verified": true
+}

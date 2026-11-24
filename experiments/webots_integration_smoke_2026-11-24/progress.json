@@ -1,0 +1,29 @@
+{
+  "completed_runs": 6,
+  "expected_runs": 6,
+  "completed_pairs": 3,
+  "last_job": [
+    "stop_turn",
+    3,
+    "predictive"
+  ],
+  "last_result": {
+    "scenario": "stop_turn",
+    "seed": 3,
+    "planner": "predictive",
+    "outcome": "success",
+    "elapsed_s": 67.84,
+    "path_length_m": 6.3619326732419355,
+    "waiting_s": 0.0,
+    "min_pedestrian_clearance_m": 0.3133703880420915,
+    "min_obstacle_clearance_m": 0.40133424674667817,
+    "clearance_violation": false,
+    "events_reached": {
+      "pedestrian_0_stops": true,
+      "pedestrian_0_turns": true,
+      "pedestrian_0_finishes": true
+    },
+    "collision_definition": "conservative circle overlap or walkway wall overlap"
+  },
+  "status": "complete"
+}

@@ -32,17 +32,29 @@ class VelocitySamplingPlanner:
             raise ValueError('Acceleration, horizon and rollout-step values must be positive.')
         self.passing = PassingPreference(parameters)
         self.diagnostics = {}
+        self._position_cache = {}
+        self._cache_observation = None
 
     def pedestrian_positions(self, observation: Observation, tau: float):
         return observation.pedestrians
+
+    def _positions_for(self, observation, tau):
+        # The estimator is updated once before command(). Cache pure model
+        # queries without rounding time or changing either variant's values.
+        if observation is not self._cache_observation:
+            self._cache_observation = observation
+            self._position_cache.clear()
+        if tau not in self._position_cache:
+            self._position_cache[tau] = self.pedestrian_positions(observation, tau)
+        return self._position_cache[tau]
 
     def _step(self, obs, pose, command, time, dt):
         end = advance(pose, command, dt)
         # Bound deviation of a constant-twist arc from its chord. A future
         # linear pedestrian model has no additional chord error.
         error = abs(command.v*command.omega)*dt*dt/8
-        gap = segment_clearance(pose, end, self.pedestrian_positions(obs, time),
-                                self.pedestrian_positions(obs, time+dt), obs, self.p, error)
+        gap = segment_clearance(pose, end, self._positions_for(obs, time),
+                                self._positions_for(obs, time+dt), obs, self.p, error)
         return end, gap
 
     def braking_admissible(self, obs, command, control_dt):
@@ -68,6 +80,8 @@ class VelocitySamplingPlanner:
         if dt <= 0:
             raise ValueError('Control dt must be positive.')
         p = self.p
+        self._cache_observation = obs
+        self._position_cache.clear()
         if math.dist((obs.pose.x, obs.pose.y), obs.goal) <= p.goal_tolerance:
             self.diagnostics = {'mode': 'goal_braking'}
             return brake(previous, dt, p)

@@ -1,0 +1,153 @@
+{
+  "backend": "webots",
+  "input_sha256": "16059d5a7a741fc8a78e203e29ece98f4810b18cec27ff64998c17be3cd8964c",
+  "n_pairs": 3,
+  "n_runs": 6,
+  "per_family": [
+    {
+      "family": "crossing",
+      "planner": "reactive",
+      "n": 1,
+      "success_n": 1,
+      "collision_n": 0,
+      "timeout_n": 0,
+      "near_margin_n": 0,
+      "median_wait_all_s": 0.128,
+      "both_success_pairs": 1,
+      "predictive_only_success_pairs": 0,
+      "reactive_only_success_pairs": 0,
+      "median_paired_pred_minus_reactive_time_s": 0.1280000000000001,
+      "median_paired_pred_minus_reactive_path_m": -0.00038129716311008366,
+      "median_paired_pred_minus_reactive_wait_s": -0.064
+    },
+    {
+      "family": "crossing",
+      "planner": "predictive",
+      "n": 1,
+      "success_n": 1,
+      "collision_n": 0,
+      "timeout_n": 0,
+      "near_margin_n": 0,
+      "median_wait_all_s": 0.064,
+      "both_success_pairs": 1,
+      "predictive_only_success_pairs": 0,
+      "reactive_only_success_pairs": 0,
+      "median_paired_pred_minus_reactive_time_s": 0.1280000000000001,
+      "median_paired_pred_minus_reactive_path_m": -0.00038129716311008366,
+      "median_paired_pred_minus_reactive_wait_s": -0.064
+    },
+    {
+      "family": "oncoming",
+      "planner": "reactive",
+      "n": 1,
+      "success_n": 1,
+      "collision_n": 0,
+      "timeout_n": 0,
+      "near_margin_n": 0,
+      "median_wait_all_s": 0.0,
+      "both_success_pairs": 1,
+      "predictive_only_success_pairs": 0,
+      "reactive_only_success_pairs": 0,
+      "median_paired_pred_minus_reactive_time_s": 0.0,
+      "median_paired_pred_minus_reactive_path_m": 0.00034392462402532686,
+      "median_paired_pred_minus_reactive_wait_s": 0.0
+    },
+    {
+      "family": "oncoming",
+      "planner": "predictive",
+      "n": 1,
+      "success_n": 1,
+      "collision_n": 0,
+      "timeout_n": 0,
+      "near_margin_n": 0,
+      "median_wait_all_s": 0.0,
+      "both_success_pairs": 1,
+      "predictive_only_success_pairs": 0,
+      "reactive_only_success_pairs": 0,
+      "median_paired_pred_minus_reactive_time_s": 0.0,
+      "median_paired_pred_minus_reactive_path_m": 0.00034392462402532686,
+      "median_paired_pred_minus_reactive_wait_s": 0.0
+    },
+    {
+      "family": "stop_turn",
+      "planner": "reactive",
+      "n": 1,
+      "success_n": 1,
+      "collision_n": 0,
+      "timeout_n": 0,
+      "near_margin_n": 0,
+      "median_wait_all_s": 0.0,
+      "both_success_pairs": 1,
+      "predictive_only_success_pairs": 0,
+      "reactive_only_success_pairs": 0,
+      "median_paired_pred_minus_reactive_time_s": -0.06399999999999295,
+      "median_paired_pred_minus_reactive_path_m": -0.014198332806376612,
+      "median_paired_pred_minus_reactive_wait_s": 0.0
+    },
+    {
+      "family": "stop_turn",
+      "planner": "predictive",
+      "n": 1,
+      "success_n": 1,
+      "collision_n": 0,
+      "timeout_n": 0,
+      "near_margin_n": 0,
+      "median_wait_all_s": 0.0,
+      "both_success_pairs": 1,
+      "predictive_only_success_pairs": 0,
+      "reactive_only_success_pairs": 0,
+      "median_paired_pred_minus_reactive_time_s": -0.06399999999999295,
+      "median_paired_pred_minus_reactive_path_m": -0.014198332806376612,
+      "median_paired_pred_minus_reactive_wait_s": 0.0
+    }
+  ],
+  "overall": {
+    "reactive": {
+      "success": 3,
+      "collision": 0,
+      "timeout": 0,
+      "near_margin": 0,
+      "n": 3
+    },
+    "predictive": {
+      "success": 3,
+      "collision": 0,
+      "timeout": 0,
+      "near_margin": 0,
+      "n": 3
+    }
+  },
+  "both_success_data": [
+    {
+      "family": "crossing",
+      "seed": 3,
+      "reactive_time_s": 54.592,
+      "predictive_time_s": 54.72,
+      "reactive_path_m": 5.7753843218736645,
+      "predictive_path_m": 5.775003024710554,
+      "reactive_wait_s": 0.128,
+      "predictive_wait_s": 0.064
+    },
+    {
+      "family": "oncoming",
+      "seed": 3,
+      "reactive_time_s": 35.584,
+      "predictive_time_s": 35.584,
+      "reactive_path_m": 6.087340593426113,
+      "predictive_path_m": 6.087684518050138,
+      "reactive_wait_s": 0.0,
+      "predictive_wait_s": 0.0
+    },
+    {
+      "family": "stop_turn",
+      "seed": 3,
+      "reactive_time_s": 67.904,
+      "predictive_time_s": 67.84,
+      "reactive_path_m": 6.376131006048312,
+      "predictive_path_m": 6.3619326732419355,
+      "reactive_wait_s": 0.0,
+      "predictive_wait_s": 0.0
+    }
+  ],
+  "interpretation": "Descriptive, backend-specific analysis; no real-world safety claim."
+}
