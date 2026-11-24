@@ -1,0 +1,4 @@
+INFO: navigation_supervisor: Starting controller: python.exe -u navigation_supervisor.py
+TRIAL_RESULT {"scenario": "crossing", "seed": 0, "planner": "reactive", "outcome": "success", "elapsed_s": 54.08, "path_length_m": 5.770892220267486, "waiting_s": 0.8960000000000004, "min_pedestrian_clearance_m": 0.24930407318153114, "min_obstacle_clearance_m": 0.9954730441712477, "clearance_violation": false, "events_reached": {}, "collision_definition": "conservative circle overlap or walkway wall overlap"}
+TRIAL_RESULT {"scenario": "oncoming", "seed": 0, "planner": "reactive", "outcome": "success", "elapsed_s": 35.584, "path_length_m": 6.013410591262553, "waiting_s": 1.2800000000000007, "min_pedestrian_clearance_m": 0.22760637180494747, "min_obstacle_clearance_m": 0.5512701077408086, "clearance_violation": false, "events_reached": {}, "collision_definition": "conservative circle overlap or walkway wall overlap"}
+INFO: navigation_supervisor: Terminating.

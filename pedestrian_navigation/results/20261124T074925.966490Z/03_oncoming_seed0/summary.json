@@ -1,0 +1,14 @@
+{
+  "scenario": "oncoming",
+  "seed": 0,
+  "planner": "reactive",
+  "outcome": "success",
+  "elapsed_s": 35.519999999999996,
+  "path_length_m": 5.967775339611306,
+  "waiting_s": 1.600000000000001,
+  "min_pedestrian_clearance_m": 0.18491223848966154,
+  "min_obstacle_clearance_m": 0.6092889126363075,
+  "clearance_violation": true,
+  "events_reached": {},
+  "collision_definition": "conservative circle overlap or walkway wall overlap"
+}

@@ -1,0 +1,56 @@
+#VRML_SIM R2025b utf8
+# Official model pinned to the commit bundled with Webots R2025b.
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/d42e42bfe9a9f3c634cf318d9452eb92c487625a/projects/robots/robotis/turtlebot/protos/TurtleBot3Burger.proto"
+
+WorldInfo {
+  basicTimeStep 64
+  randomSeed 0
+  coordinateSystem "ENU"
+}
+Viewpoint {
+  orientation -0.37908079 0.37908079 0.84415372 1.73941227
+  position 0 -8 9
+}
+Background { skyColor [ 0.12 0.16 0.22 ] }
+DirectionalLight {
+  direction -0.3 0.4 -1
+  intensity 1
+}
+Solid {
+  translation 0 0 -0.05
+  name "ground"
+  children [
+    Shape {
+      appearance PBRAppearance { baseColor 0.53 0.56 0.60 roughness 1 metalness 0 }
+      geometry Box { size 8 3.6 0.1 }
+    }
+  ]
+  boundingObject Box { size 8 3.6 0.1 }
+}
+Solid {
+  translation 0 1.4 0.15
+  name "north wall"
+  children [
+    Shape {
+      appearance DEF WALL_MATERIAL PBRAppearance { baseColor 0.25 0.31 0.38 roughness 1 metalness 0 }
+      geometry Box { size 8 0.2 0.3 }
+    }
+  ]
+  boundingObject Box { size 8 0.2 0.3 }
+}
+Solid {
+  translation 0 -1.4 0.15
+  name "south wall"
+  children [
+    Shape { appearance USE WALL_MATERIAL geometry Box { size 8 0.2 0.3 } }
+  ]
+  boundingObject Box { size 8 0.2 0.3 }
+}
+DEF ROBOT TurtleBot3Burger {
+  translation -3 0 0
+  rotation 0 0 1 0
+  name "delivery robot"
+  supervisor TRUE
+  controller "navigation_supervisor"
+  extensionSlot []
+}

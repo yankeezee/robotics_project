@@ -1,0 +1,13 @@
+{
+  "planner": "reactive",
+  "scenarios": [
+    "static"
+  ],
+  "seed": 0,
+  "parameters": {
+    "timeout": 120.0
+  },
+  "quit_on_complete": true,
+  "capture_image": true,
+  "output_dir": "C:\\Users\\nasty\\hse\\Robotics\\project\\pedestrian_navigation\\results\\20261124T072835.738919Z"
+}

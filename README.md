@@ -1,22 +1,149 @@
-# Pedestrian-Aware Navigation — shared starting point
 
-ME4670J. Team: Anastasiia Ianke and Sophia Olsson.
+# Pedestrian-Aware Navigation for a Delivery Robot
 
-This is a **provisional shared Python foundation**, not a validated Webots project and not Anastasiia's completed implementation. It implements a compact kinematic planner, scenario generation and a reusable controller interface. Both team members must review and freeze common parameters before any final Webots comparison.
+ME4670J Robotics Project
 
-## Installation and initial check
+Team members:
+- Anastasiia Ianke
+- Sophia Olsson
+
+## Project Overview
+
+This project investigates whether short-horizon
+pedestrian motion prediction improves navigation
+for a differential-drive delivery robot.
+
+We compare two local navigation strategies:
+
+1. Reactive planning: pedestrians are assumed
+   stationary during each planning rollout.
+2. Predictive planning: pedestrian velocities
+   are estimated from recent observations and
+   used to predict future positions.
+
+Both methods should use identical robot
+parameters, control constraints, collision
+checks, and scoring functions.
+
+## Project Structure
+
+### Shared Python foundation
+
+`pednav/`
+
+Contains the shared kinematic navigation
+framework and simulation utilities.
+
+### Sophia - Prediction and Analysis
+
+`pednav/sophia/`
+
+Contains:
+- Pedestrian velocity estimation
+- Predictive planner interface
+- Controller integration
+- Paired experiment analysis
+
+Additional tests and analysis scripts are
+located in `tests/` and `scripts/`.
+
+### Anastasiia - Webots and Reactive Navigation
+
+`pedestrian_navigation/`
+
+Contains:
+- Webots simulation environment
+- TurtleBot3 robot controller
+- Scripted pedestrian scenarios
+- Reactive navigation implementation
+- Scenario runner and logging
+- Development experiments
+
+Development documentation is located in
+`pedestrian_navigation/research/`.
+
+## Installation
+
+Python 3.10 or newer is required.
+
+Install shared Python dependencies:
 
 ```bash
-python -m pip install -r requirements.txt
-python -c "from pednav.core import LocalPlanner, Config; print('Shared foundation loaded:', Config().horizon)"
+python3 -m pip install -r requirements.txt
 ```
 
-## Division of responsibility
+## Run Python Tests
 
-- Sophia: shared planner interface, pedestrian velocity estimation, predictive mode integration and paired analysis (separate feature branch).
-- Anastasiia: Webots environment, scripted pedestrians, baseline integration, experiment runner and trial logging (separate feature branch).
-- Joint: collision semantics, coordinate conventions, parameter freeze, testing and results.
+From the repository root:
 
-`pednav/core.py` includes a **reference reactive mode** to share scoring/sampling with predictive mode. It is not yet a verified Webots baseline and should not be represented as Anastasiia's authored code.
+```bash
+python3 -m pytest -q
+python3 scripts/sophia_smoke.py
+```
 
-Next: upload Sophia's add-on on branch `feature/sophia-prediction-analysis`.
+## Run Webots
+
+Webots R2025b is the intended version.
+
+From the Webots project directory:
+
+```bash
+cd pedestrian_navigation
+python3 -m unittest discover -s tests -v
+python3 run.py --scenario crossing --show
+```
+
+After integration and validation, both
+reactive and predictive planning should
+be runnable using the same scenarios.
+
+## Experiments
+
+Three scenario families are planned:
+
+1. Crossing pedestrians
+2. Oncoming pedestrians
+3. Unexpected stops or turns
+
+The planned final evaluation consists of
+20 paired trials per scenario family,
+for a total of 120 runs.
+
+Metrics include:
+- Goal success rate
+- Collision count
+- Travel time
+- Path length
+- Minimum pedestrian clearance
+- Waiting time
+
+## Development Status
+
+Sophia's predictive components have passed
+15 local Python tests.
+
+Anastasiia has developed the Webots
+environment and reactive baseline.
+
+The two implementations are being integrated.
+
+A final paired comparison in Webots has
+not yet been verified.
+
+Results from the earlier Python kinematic
+simulator must remain separate from Webots
+experimental results.
+
+## Team Responsibilities
+
+Anastasiia:
+Webots environment, reactive planning,
+pedestrian scenarios, and experiment logging.
+
+Sophia:
+Pedestrian motion prediction, shared
+planner integration, and results analysis.
+
+Shared:
+Experiment design, integration testing,
+report, demonstration, and presentation.

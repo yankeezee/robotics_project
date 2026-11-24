@@ -1,0 +1,7 @@
+{
+  "planner": "reactive",
+  "scenarios": ["empty"],
+  "seed": 0,
+  "quit_on_complete": false,
+  "parameters": {}
+}

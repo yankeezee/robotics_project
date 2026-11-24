@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+results/*
+!results/README.md
+!results/20261124T072835.738919Z/
+!results/20261124T073024.104501Z/
+!results/20261124T074925.966490Z/
+!results/20261124T075112.859332Z/
+!results/20261124T075427.634085Z/
+!results/kinematic_20261124T074538.731528Z/
+!results/kinematic_20261124T074722.479517Z/
+!results/kinematic_20261124T075345.052301Z/
+results/**/scene.png
+worlds/.walkway.wbproj
