@@ -1,0 +1,723 @@
+{
+  "backend": "webots",
+  "input_sha256": "57e96692987f0e6fc184d7784c5964368ff80dd09d5a56d5a6a463cc1ccdac92",
+  "n_pairs": 60,
+  "n_runs": 120,
+  "per_family": [
+    {
+      "family": "crossing",
+      "planner": "reactive",
+      "n": 20,
+      "success_n": 20,
+      "collision_n": 0,
+      "timeout_n": 0,
+      "near_margin_n": 0,
+      "median_wait_all_s": 0.128,
+      "both_success_pairs": 20,
+      "predictive_only_success_pairs": 0,
+      "reactive_only_success_pairs": 0,
+      "median_paired_pred_minus_reactive_time_s": 0.06400000000000006,
+      "median_paired_pred_minus_reactive_path_m": 0.001472647129538096,
+      "median_paired_pred_minus_reactive_wait_s": 0.0
+    },
+    {
+      "family": "crossing",
+      "planner": "predictive",
+      "n": 20,
+      "success_n": 20,
+      "collision_n": 0,
+      "timeout_n": 0,
+      "near_margin_n": 0,
+      "median_wait_all_s": 0.064,
+      "both_success_pairs": 20,
+      "predictive_only_success_pairs": 0,
+      "reactive_only_success_pairs": 0,
+      "median_paired_pred_minus_reactive_time_s": 0.06400000000000006,
+      "median_paired_pred_minus_reactive_path_m": 0.001472647129538096,
+      "median_paired_pred_minus_reactive_wait_s": 0.0
+    },
+    {
+      "family": "oncoming",
+      "planner": "reactive",
+      "n": 20,
+      "success_n": 20,
+      "collision_n": 0,
+      "timeout_n": 0,
+      "near_margin_n": 2,
+      "median_wait_all_s": 0.7040000000000002,
+      "both_success_pairs": 20,
+      "predictive_only_success_pairs": 0,
+      "reactive_only_success_pairs": 0,
+      "median_paired_pred_minus_reactive_time_s": 0.16000000000000014,
+      "median_paired_pred_minus_reactive_path_m": 0.0012179432594821016,
+      "median_paired_pred_minus_reactive_wait_s": 0.6080000000000005
+    },
+    {
+      "family": "oncoming",
+      "planner": "predictive",
+      "n": 20,
+      "success_n": 20,
+      "collision_n": 0,
+      "timeout_n": 0,
+      "near_margin_n": 3,
+      "median_wait_all_s": 1.3120000000000007,
+      "both_success_pairs": 20,
+      "predictive_only_success_pairs": 0,
+      "reactive_only_success_pairs": 0,
+      "median_paired_pred_minus_reactive_time_s": 0.16000000000000014,
+      "median_paired_pred_minus_reactive_path_m": 0.0012179432594821016,
+      "median_paired_pred_minus_reactive_wait_s": 0.6080000000000005
+    },
+    {
+      "family": "stop_turn",
+      "planner": "reactive",
+      "n": 20,
+      "success_n": 20,
+      "collision_n": 0,
+      "timeout_n": 0,
+      "near_margin_n": 0,
+      "median_wait_all_s": 0.064,
+      "both_success_pairs": 20,
+      "predictive_only_success_pairs": 0,
+      "reactive_only_success_pairs": 0,
+      "median_paired_pred_minus_reactive_time_s": 0.0,
+      "median_paired_pred_minus_reactive_path_m": -0.0012847568979443835,
+      "median_paired_pred_minus_reactive_wait_s": 0.0
+    },
+    {
+      "family": "stop_turn",
+      "planner": "predictive",
+      "n": 20,
+      "success_n": 20,
+      "collision_n": 0,
+      "timeout_n": 0,
+      "near_margin_n": 0,
+      "median_wait_all_s": 0.0,
+      "both_success_pairs": 20,
+      "predictive_only_success_pairs": 0,
+      "reactive_only_success_pairs": 0,
+      "median_paired_pred_minus_reactive_time_s": 0.0,
+      "median_paired_pred_minus_reactive_path_m": -0.0012847568979443835,
+      "median_paired_pred_minus_reactive_wait_s": 0.0
+    }
+  ],
+  "overall": {
+    "reactive": {
+      "success": 60,
+      "collision": 0,
+      "timeout": 0,
+      "near_margin": 2,
+      "n": 60
+    },
+    "predictive": {
+      "success": 60,
+      "collision": 0,
+      "timeout": 0,
+      "near_margin": 3,
+      "n": 60
+    }
+  },
+  "both_success_data": [
+    {
+      "family": "crossing",
+      "seed": 6000,
+      "reactive_time_s": 54.848,
+      "predictive_time_s": 54.848,
+      "reactive_path_m": 5.778825715173463,
+      "predictive_path_m": 5.777508646460122,
+      "reactive_wait_s": 0.064,
+      "predictive_wait_s": 0.064
+    },
+    {
+      "family": "crossing",
+      "seed": 6001,
+      "reactive_time_s": 54.016,
+      "predictive_time_s": 53.888,
+      "reactive_path_m": 5.771318179672222,
+      "predictive_path_m": 5.778676108028744,
+      "reactive_wait_s": 0.8960000000000004,
+      "predictive_wait_s": 1.4080000000000008
+    },
+    {
+      "family": "crossing",
+      "seed": 6002,
+      "reactive_time_s": 54.656,
+      "predictive_time_s": 54.72,
+      "reactive_path_m": 5.771850223429511,
+      "predictive_path_m": 5.777700216261583,
+      "reactive_wait_s": 0.0,
+      "predictive_wait_s": 0.0
+    },
+    {
+      "family": "crossing",
+      "seed": 6003,
+      "reactive_time_s": 53.76,
+      "predictive_time_s": 53.888,
+      "reactive_path_m": 5.771657635535055,
+      "predictive_path_m": 5.774835603516143,
+      "reactive_wait_s": 1.1520000000000006,
+      "predictive_wait_s": 1.728000000000001
+    },
+    {
+      "family": "crossing",
+      "seed": 6004,
+      "reactive_time_s": 54.656,
+      "predictive_time_s": 54.656,
+      "reactive_path_m": 5.777309618066237,
+      "predictive_path_m": 5.776555117986548,
+      "reactive_wait_s": 0.064,
+      "predictive_wait_s": 0.064
+    },
+    {
+      "family": "crossing",
+      "seed": 6005,
+      "reactive_time_s": 54.4,
+      "predictive_time_s": 54.4,
+      "reactive_path_m": 5.773822447368543,
+      "predictive_path_m": 5.780653841445495,
+      "reactive_wait_s": 1.2800000000000007,
+      "predictive_wait_s": 1.9840000000000013
+    },
+    {
+      "family": "crossing",
+      "seed": 6006,
+      "reactive_time_s": 54.656,
+      "predictive_time_s": 54.72,
+      "reactive_path_m": 5.776336235053273,
+      "predictive_path_m": 5.777086253732568,
+      "reactive_wait_s": 0.128,
+      "predictive_wait_s": 0.064
+    },
+    {
+      "family": "crossing",
+      "seed": 6007,
+      "reactive_time_s": 54.144,
+      "predictive_time_s": 54.336,
+      "reactive_path_m": 5.7718423533970835,
+      "predictive_path_m": 5.779483012913341,
+      "reactive_wait_s": 1.3440000000000007,
+      "predictive_wait_s": 2.1120000000000014
+    },
+    {
+      "family": "crossing",
+      "seed": 6008,
+      "reactive_time_s": 54.336,
+      "predictive_time_s": 54.4,
+      "reactive_path_m": 5.773177290040104,
+      "predictive_path_m": 5.7717876189140975,
+      "reactive_wait_s": 0.128,
+      "predictive_wait_s": 0.064
+    },
+    {
+      "family": "crossing",
+      "seed": 6009,
+      "reactive_time_s": 54.144,
+      "predictive_time_s": 54.144,
+      "reactive_path_m": 5.77194111121833,
+      "predictive_path_m": 5.78022280893306,
+      "reactive_wait_s": 1.0240000000000005,
+      "predictive_wait_s": 1.728000000000001
+    },
+    {
+      "family": "crossing",
+      "seed": 6010,
+      "reactive_time_s": 54.72,
+      "predictive_time_s": 54.72,
+      "reactive_path_m": 5.773432291045386,
+      "predictive_path_m": 5.773823486872127,
+      "reactive_wait_s": 0.128,
+      "predictive_wait_s": 0.064
+    },
+    {
+      "family": "crossing",
+      "seed": 6011,
+      "reactive_time_s": 54.656,
+      "predictive_time_s": 54.656,
+      "reactive_path_m": 5.774965943091,
+      "predictive_path_m": 5.771827696105631,
+      "reactive_wait_s": 0.128,
+      "predictive_wait_s": 0.064
+    },
+    {
+      "family": "crossing",
+      "seed": 6012,
+      "reactive_time_s": 54.08,
+      "predictive_time_s": 54.4,
+      "reactive_path_m": 5.771004856788139,
+      "predictive_path_m": 5.773717676920365,
+      "reactive_wait_s": 0.256,
+      "predictive_wait_s": 0.064
+    },
+    {
+      "family": "crossing",
+      "seed": 6013,
+      "reactive_time_s": 54.656,
+      "predictive_time_s": 54.592,
+      "reactive_path_m": 5.777289230849879,
+      "predictive_path_m": 5.771939970879024,
+      "reactive_wait_s": 0.064,
+      "predictive_wait_s": 0.064
+    },
+    {
+      "family": "crossing",
+      "seed": 6014,
+      "reactive_time_s": 54.336,
+      "predictive_time_s": 54.528,
+      "reactive_path_m": 5.770957110757021,
+      "predictive_path_m": 5.771830753833943,
+      "reactive_wait_s": 0.192,
+      "predictive_wait_s": 0.064
+    },
+    {
+      "family": "crossing",
+      "seed": 6015,
+      "reactive_time_s": 54.72,
+      "predictive_time_s": 54.72,
+      "reactive_path_m": 5.777285587448334,
+      "predictive_path_m": 5.778214152315032,
+      "reactive_wait_s": 0.064,
+      "predictive_wait_s": 0.064
+    },
+    {
+      "family": "crossing",
+      "seed": 6016,
+      "reactive_time_s": 54.208,
+      "predictive_time_s": 54.72,
+      "reactive_path_m": 5.775106469445854,
+      "predictive_path_m": 5.778809979746897,
+      "reactive_wait_s": 0.7680000000000002,
+      "predictive_wait_s": 0.192
+    },
+    {
+      "family": "crossing",
+      "seed": 6017,
+      "reactive_time_s": 54.208,
+      "predictive_time_s": 54.272,
+      "reactive_path_m": 5.773294985705967,
+      "predictive_path_m": 5.784110963361382,
+      "reactive_wait_s": 1.0880000000000005,
+      "predictive_wait_s": 1.7920000000000011
+    },
+    {
+      "family": "crossing",
+      "seed": 6018,
+      "reactive_time_s": 54.528,
+      "predictive_time_s": 54.656,
+      "reactive_path_m": 5.772916616786946,
+      "predictive_path_m": 5.774933346179325,
+      "reactive_wait_s": 0.128,
+      "predictive_wait_s": 0.064
+    },
+    {
+      "family": "crossing",
+      "seed": 6019,
+      "reactive_time_s": 54.592,
+      "predictive_time_s": 54.784,
+      "reactive_path_m": 5.777211467816813,
+      "predictive_path_m": 5.777565015271234,
+      "reactive_wait_s": 0.128,
+      "predictive_wait_s": 0.128
+    },
+    {
+      "family": "oncoming",
+      "seed": 6000,
+      "reactive_time_s": 35.072,
+      "predictive_time_s": 35.072,
+      "reactive_path_m": 6.0444413908172505,
+      "predictive_path_m": 6.044730153363479,
+      "reactive_wait_s": 0.0,
+      "predictive_wait_s": 0.0
+    },
+    {
+      "family": "oncoming",
+      "seed": 6001,
+      "reactive_time_s": 35.712,
+      "predictive_time_s": 36.288000000000004,
+      "reactive_path_m": 6.0033319050871015,
+      "predictive_path_m": 6.009138844537976,
+      "reactive_wait_s": 1.4720000000000009,
+      "predictive_wait_s": 2.4960000000000018
+    },
+    {
+      "family": "oncoming",
+      "seed": 6002,
+      "reactive_time_s": 35.2,
+      "predictive_time_s": 35.456,
+      "reactive_path_m": 6.002900611073996,
+      "predictive_path_m": 6.010664600209418,
+      "reactive_wait_s": 0.9600000000000004,
+      "predictive_wait_s": 1.728000000000001
+    },
+    {
+      "family": "oncoming",
+      "seed": 6003,
+      "reactive_time_s": 35.264,
+      "predictive_time_s": 35.584,
+      "reactive_path_m": 5.99560316586814,
+      "predictive_path_m": 5.9971814620486175,
+      "reactive_wait_s": 1.0240000000000005,
+      "predictive_wait_s": 1.8560000000000012
+    },
+    {
+      "family": "oncoming",
+      "seed": 6004,
+      "reactive_time_s": 35.392,
+      "predictive_time_s": 35.52,
+      "reactive_path_m": 6.042593305318378,
+      "predictive_path_m": 6.043450895656864,
+      "reactive_wait_s": 0.8320000000000003,
+      "predictive_wait_s": 1.4720000000000009
+    },
+    {
+      "family": "oncoming",
+      "seed": 6005,
+      "reactive_time_s": 34.88,
+      "predictive_time_s": 34.88,
+      "reactive_path_m": 6.0276379930878345,
+      "predictive_path_m": 6.02807032216239,
+      "reactive_wait_s": 0.0,
+      "predictive_wait_s": 0.0
+    },
+    {
+      "family": "oncoming",
+      "seed": 6006,
+      "reactive_time_s": 35.52,
+      "predictive_time_s": 35.52,
+      "reactive_path_m": 6.089433570446394,
+      "predictive_path_m": 6.090046227411992,
+      "reactive_wait_s": 0.0,
+      "predictive_wait_s": 0.0
+    },
+    {
+      "family": "oncoming",
+      "seed": 6007,
+      "reactive_time_s": 34.688,
+      "predictive_time_s": 34.688,
+      "reactive_path_m": 6.00937327993576,
+      "predictive_path_m": 6.011188549284703,
+      "reactive_wait_s": 0.0,
+      "predictive_wait_s": 0.0
+    },
+    {
+      "family": "oncoming",
+      "seed": 6008,
+      "reactive_time_s": 36.288000000000004,
+      "predictive_time_s": 37.056,
+      "reactive_path_m": 6.033234516030903,
+      "predictive_path_m": 6.018972494051374,
+      "reactive_wait_s": 1.664000000000001,
+      "predictive_wait_s": 2.944000000000002
+    },
+    {
+      "family": "oncoming",
+      "seed": 6009,
+      "reactive_time_s": 35.136,
+      "predictive_time_s": 35.328,
+      "reactive_path_m": 6.021694568716742,
+      "predictive_path_m": 6.032204979176567,
+      "reactive_wait_s": 0.5760000000000001,
+      "predictive_wait_s": 1.1520000000000006
+    },
+    {
+      "family": "oncoming",
+      "seed": 6010,
+      "reactive_time_s": 35.072,
+      "predictive_time_s": 35.072,
+      "reactive_path_m": 6.0405317403952585,
+      "predictive_path_m": 6.040806379962028,
+      "reactive_wait_s": 0.0,
+      "predictive_wait_s": 0.0
+    },
+    {
+      "family": "oncoming",
+      "seed": 6011,
+      "reactive_time_s": 35.456,
+      "predictive_time_s": 35.456,
+      "reactive_path_m": 6.078719728177777,
+      "predictive_path_m": 6.079080201301234,
+      "reactive_wait_s": 0.0,
+      "predictive_wait_s": 0.0
+    },
+    {
+      "family": "oncoming",
+      "seed": 6012,
+      "reactive_time_s": 36.032000000000004,
+      "predictive_time_s": 36.672,
+      "reactive_path_m": 6.034884929432393,
+      "predictive_path_m": 6.030380084065464,
+      "reactive_wait_s": 1.600000000000001,
+      "predictive_wait_s": 2.816000000000002
+    },
+    {
+      "family": "oncoming",
+      "seed": 6013,
+      "reactive_time_s": 35.264,
+      "predictive_time_s": 35.456,
+      "reactive_path_m": 6.019968000201343,
+      "predictive_path_m": 6.021986841375691,
+      "reactive_wait_s": 0.8320000000000003,
+      "predictive_wait_s": 1.664000000000001
+    },
+    {
+      "family": "oncoming",
+      "seed": 6014,
+      "reactive_time_s": 35.84,
+      "predictive_time_s": 36.224000000000004,
+      "reactive_path_m": 6.061566895776901,
+      "predictive_path_m": 6.069475935686547,
+      "reactive_wait_s": 1.3440000000000007,
+      "predictive_wait_s": 2.3680000000000017
+    },
+    {
+      "family": "oncoming",
+      "seed": 6015,
+      "reactive_time_s": 35.328,
+      "predictive_time_s": 35.648,
+      "reactive_path_m": 6.004889113850382,
+      "predictive_path_m": 6.010987561147042,
+      "reactive_wait_s": 1.0880000000000005,
+      "predictive_wait_s": 1.9200000000000013
+    },
+    {
+      "family": "oncoming",
+      "seed": 6016,
+      "reactive_time_s": 35.456,
+      "predictive_time_s": 35.712,
+      "reactive_path_m": 6.037379452889449,
+      "predictive_path_m": 6.040795592767346,
+      "reactive_wait_s": 1.0240000000000005,
+      "predictive_wait_s": 1.9200000000000013
+    },
+    {
+      "family": "oncoming",
+      "seed": 6017,
+      "reactive_time_s": 35.008,
+      "predictive_time_s": 35.008,
+      "reactive_path_m": 6.032707494476809,
+      "predictive_path_m": 6.03294348317748,
+      "reactive_wait_s": 0.0,
+      "predictive_wait_s": 0.0
+    },
+    {
+      "family": "oncoming",
+      "seed": 6018,
+      "reactive_time_s": 35.648,
+      "predictive_time_s": 35.776,
+      "reactive_path_m": 6.085257086882672,
+      "predictive_path_m": 6.092274973464478,
+      "reactive_wait_s": 0.512,
+      "predictive_wait_s": 1.0880000000000005
+    },
+    {
+      "family": "oncoming",
+      "seed": 6019,
+      "reactive_time_s": 35.712,
+      "predictive_time_s": 35.712,
+      "reactive_path_m": 6.106707376789312,
+      "predictive_path_m": 6.107349020124581,
+      "reactive_wait_s": 0.0,
+      "predictive_wait_s": 0.0
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6000,
+      "reactive_time_s": 66.944,
+      "predictive_time_s": 66.944,
+      "reactive_path_m": 6.356174299793829,
+      "predictive_path_m": 6.35465742834474,
+      "reactive_wait_s": 0.0,
+      "predictive_wait_s": 0.0
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6001,
+      "reactive_time_s": 68.032,
+      "predictive_time_s": 68.416,
+      "reactive_path_m": 6.336102756864673,
+      "predictive_path_m": 6.352131673757837,
+      "reactive_wait_s": 2.3680000000000017,
+      "predictive_wait_s": 1.8560000000000012
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6002,
+      "reactive_time_s": 66.88,
+      "predictive_time_s": 66.88,
+      "reactive_path_m": 6.3577951578337375,
+      "predictive_path_m": 6.356656253630181,
+      "reactive_wait_s": 0.0,
+      "predictive_wait_s": 0.0
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6003,
+      "reactive_time_s": 68.288,
+      "predictive_time_s": 68.416,
+      "reactive_path_m": 6.337957831616968,
+      "predictive_path_m": 6.335282823674271,
+      "reactive_wait_s": 2.688000000000002,
+      "predictive_wait_s": 3.2640000000000025
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6004,
+      "reactive_time_s": 67.2,
+      "predictive_time_s": 67.2,
+      "reactive_path_m": 6.359908772862748,
+      "predictive_path_m": 6.358478163270416,
+      "reactive_wait_s": 0.0,
+      "predictive_wait_s": 0.0
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6005,
+      "reactive_time_s": 68.288,
+      "predictive_time_s": 68.48,
+      "reactive_path_m": 6.331361829721829,
+      "predictive_path_m": 6.33192209410508,
+      "reactive_wait_s": 2.560000000000002,
+      "predictive_wait_s": 3.5200000000000027
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6006,
+      "reactive_time_s": 67.456,
+      "predictive_time_s": 67.456,
+      "reactive_path_m": 6.359421872343887,
+      "predictive_path_m": 6.358463186093738,
+      "reactive_wait_s": 0.0,
+      "predictive_wait_s": 0.0
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6007,
+      "reactive_time_s": 68.48,
+      "predictive_time_s": 68.544,
+      "reactive_path_m": 6.334393716581508,
+      "predictive_path_m": 6.330445828106251,
+      "reactive_wait_s": 2.688000000000002,
+      "predictive_wait_s": 3.5200000000000027
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6008,
+      "reactive_time_s": 67.776,
+      "predictive_time_s": 67.776,
+      "reactive_path_m": 6.37445621105554,
+      "predictive_path_m": 6.368832448068986,
+      "reactive_wait_s": 0.128,
+      "predictive_wait_s": 0.0
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6009,
+      "reactive_time_s": 68.16,
+      "predictive_time_s": 68.288,
+      "reactive_path_m": 6.335279087859134,
+      "predictive_path_m": 6.327767772389484,
+      "reactive_wait_s": 2.4320000000000017,
+      "predictive_wait_s": 3.3280000000000025
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6010,
+      "reactive_time_s": 67.072,
+      "predictive_time_s": 67.008,
+      "reactive_path_m": 6.356970435723539,
+      "predictive_path_m": 6.353826480662066,
+      "reactive_wait_s": 0.0,
+      "predictive_wait_s": 0.0
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6011,
+      "reactive_time_s": 67.52,
+      "predictive_time_s": 67.456,
+      "reactive_path_m": 6.36108126538672,
+      "predictive_path_m": 6.358113360023725,
+      "reactive_wait_s": 0.0,
+      "predictive_wait_s": 0.0
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6012,
+      "reactive_time_s": 68.032,
+      "predictive_time_s": 67.968,
+      "reactive_path_m": 6.371433085707297,
+      "predictive_path_m": 6.372808767564912,
+      "reactive_wait_s": 1.600000000000001,
+      "predictive_wait_s": 0.128
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6013,
+      "reactive_time_s": 66.944,
+      "predictive_time_s": 66.944,
+      "reactive_path_m": 6.35524915917066,
+      "predictive_path_m": 6.358314242467653,
+      "reactive_wait_s": 0.0,
+      "predictive_wait_s": 0.0
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6014,
+      "reactive_time_s": 67.968,
+      "predictive_time_s": 67.968,
+      "reactive_path_m": 6.372910630103774,
+      "predictive_path_m": 6.3736123529614375,
+      "reactive_wait_s": 0.8960000000000004,
+      "predictive_wait_s": 0.0
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6015,
+      "reactive_time_s": 66.88,
+      "predictive_time_s": 66.88,
+      "reactive_path_m": 6.355824346441895,
+      "predictive_path_m": 6.357306664434947,
+      "reactive_wait_s": 0.0,
+      "predictive_wait_s": 0.0
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6016,
+      "reactive_time_s": 68.032,
+      "predictive_time_s": 68.48,
+      "reactive_path_m": 6.338255078569539,
+      "predictive_path_m": 6.36888341703266,
+      "reactive_wait_s": 2.2400000000000015,
+      "predictive_wait_s": 0.5760000000000001
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6017,
+      "reactive_time_s": 68.16,
+      "predictive_time_s": 68.352,
+      "reactive_path_m": 6.332373190268104,
+      "predictive_path_m": 6.326974630184181,
+      "reactive_wait_s": 2.4960000000000018,
+      "predictive_wait_s": 3.3920000000000026
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6018,
+      "reactive_time_s": 67.648,
+      "predictive_time_s": 67.648,
+      "reactive_path_m": 6.360081652499496,
+      "predictive_path_m": 6.359590958903232,
+      "reactive_wait_s": 0.0,
+      "predictive_wait_s": 0.0
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6019,
+      "reactive_time_s": 67.84,
+      "predictive_time_s": 67.84,
+      "reactive_path_m": 6.363569875933807,
+      "predictive_path_m": 6.360232443728268,
+      "reactive_wait_s": 0.0,
+      "predictive_wait_s": 0.0
+    }
+  ],
+  "interpretation": "Descriptive, backend-specific analysis; no real-world safety claim."
+}

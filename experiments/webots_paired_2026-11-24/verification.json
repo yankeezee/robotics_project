@@ -1,0 +1,19 @@
+{
+  "n_runs": 120,
+  "n_pairs": 60,
+  "source_unchanged_after_freeze": true,
+  "all_configurations_match_protocol": true,
+  "all_environments_identical": true,
+  "all_environment_packages_match_protocol": true,
+  "main_not_merged": true,
+  "pytest_preflight": {
+    "passed": 45,
+    "command": "python -m pytest -q",
+    "source_commit": "f57b4281cd5bbcf0722082761861844ea338bcfe"
+  },
+  "raw_archive_file_count": 1800,
+  "all_trial_source_archives_identical": true,
+  "all_trial_source_archives_match_freeze": true,
+  "raw_archive_crc_verified": true,
+  "stop_turn_events_reached_runs": 40
+}

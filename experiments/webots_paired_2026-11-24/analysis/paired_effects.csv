@@ -1,0 +1,4 @@
+family,n_pairs,both_success_pairs,predictive_only_success_n,reactive_only_success_n,median_pred_minus_reactive_time_s,median_pred_minus_reactive_path_m,median_pred_minus_reactive_wait_both_success_s,median_pred_minus_reactive_clearance_all_m
+crossing,20,20,0,0,0.06400000000000006,0.001472647129538096,0.0,0.010880678982930159
+oncoming,20,20,0,0,0.16000000000000014,0.0012179432594821016,0.6080000000000005,-0.004910888450850637
+stop_turn,20,20,0,0,0.0,-0.0012847568979443835,0.0,0.00313603686562125

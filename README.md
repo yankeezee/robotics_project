@@ -93,9 +93,11 @@ python3 -m unittest discover -s tests -v
 python3 run.py --scenario crossing --show
 ```
 
-After integration and validation, both
-reactive and predictive planning should
-be runnable using the same scenarios.
+Both modes are now verified in Webots using the same scenes and shared controller:
+
+```bash
+python3 run.py --planner predictive --scenario crossing --seed 3 --show
+```
 
 ## Experiments
 
@@ -105,9 +107,13 @@ Three scenario families are planned:
 2. Oncoming pedestrians
 3. Unexpected stops or turns
 
-The planned final evaluation consists of
-20 paired trials per scenario family,
-for a total of 120 runs.
+The completed Webots evaluation uses 20 paired trials per scenario family,
+seeds 6000–6019, for a total of 60 pairs / 120 runs. The current integrated
+scenarios use one pedestrian per case.
+
+See the [full results and plots](experiments/webots_paired_2026-11-24/RESULTS.md),
+[experiment protocol](docs/WEBOTS_EXPERIMENT_PROTOCOL.md), and
+[reproducibility artifacts](experiments/README.md).
 
 Metrics include:
 - Goal success rate
@@ -119,16 +125,17 @@ Metrics include:
 
 ## Development Status
 
-Sophia's predictive components have passed
-15 local Python tests.
+The integrated project passes **45 Python tests**. Both planners have been
+verified in Webots R2025b, with fresh processes and audited matching inputs.
+Both reached the goal in all 60 evaluation cases, with no collisions/timeouts.
+Oncoming clearance-margin violations occurred in 2/20 reactive and 3/20
+predictive cases; prediction did not improve median paired travel time in
+these tests. See the report for all six requested metrics and scope limits.
 
-Anastasiia has developed the Webots
-environment and reactive baseline.
-
-The two implementations are being integrated.
-
-A final paired comparison in Webots has
-not yet been verified.
+Code, parameters, seeds, raw observations, trajectories, diagnostics, source
+archives, integrity checks and analysis outputs are saved. Raw logs are bundled
+in each experiment's `raw_logs.zip`. Work remains on
+`integration/webots-prediction`; no merge into `main` is included here.
 
 Results from the earlier Python kinematic
 simulator must remain separate from Webots

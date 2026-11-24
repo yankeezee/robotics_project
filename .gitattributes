@@ -1,0 +1,4 @@
+# Experiment manifests contain SHA-256 hashes. Preserve artifact bytes on all hosts.
+experiments/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Matplotlib SVG paths contain intentional trailing spaces inside attribute values.
+experiments/**/*.svg -whitespace

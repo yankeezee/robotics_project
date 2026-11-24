@@ -2,8 +2,14 @@
 
 Anastasiia's Webots environment, scripted scenarios, reactive baseline and
 logging are now connected to Sophia's ID-based velocity estimator through a
-shared velocity-sampling planning core. This is a **Python-tested integration
-draft**, not a verified predictive Webots result or final held-out evaluation.
+shared velocity-sampling planning core. Both modes are now **verified in Webots**,
+with 60 prospective paired cases / 120 runs and 45 passing Python tests.
+
+See the [completed results and plots](../experiments/webots_paired_2026-11-24/RESULTS.md)
+and [frozen experiment protocol](../docs/WEBOTS_EXPERIMENT_PROTOCOL.md).
+Both modes reached every goal without geometric collisions; oncoming had
+2/20 reactive and 3/20 predictive clearance-margin violations. The historical
+development checkpoints below remain available separately.
 
 Read [the integration guide](../docs/INTEGRATION_GUIDE_SV.md) and the
 [original Anastasiia handoff](../docs/ANASTASIIA_HANDOFF.md). The earlier
@@ -12,7 +18,10 @@ controller; do not treat their outcomes as a paired Webots comparison.
 
 ## Start
 
-Requirements: Webots R2025b and Python 3.10 or newer. The **predictive** mode also requires NumPy; install the repository-root `requirements.txt` with the same Python interpreter used by the Webots controller. The reactive mode uses the standard library.
+Requirements: Webots R2025b and Python 3.10 or newer. Install the repository-root
+`requirements.txt` with the same interpreter used by the Webots controller.
+Reactive planning itself uses the standard library; prediction uses NumPy, and
+the complete experiment logger records the declared package versions in both modes.
 The first world load downloads the official TurtleBot3 Burger model and its
 assets from Cyberbotics. Its source commit is pinned in `worlds/walkway.wbt`.
 
@@ -178,14 +187,13 @@ The before/after figure can be regenerated with optional Matplotlib:
 python tools/plot_development.py --before results/20261124T073024.104501Z --after results/20261124T075112.859332Z --output research/assets/seed0_reactive_revision.png
 ```
 
-## Next work
+## Next work after the paired experiment
 
-1. Validate more development speeds and offsets and inspect any failures;
-   preserve the current seed-0 evidence and source snapshots.
-2. Review geometry, conservative speed regulation, and collision definitions
-   together before fixing the final protocol.
-3. Add 2--5 pedestrian cases, varied offsets, and separate development/test seeds.
-4. Integrate Sophia's predictor, freeze shared settings, then run paired evaluation.
+1. Review the 60-pair results together, including adverse oncoming proximity.
+2. Integrate the verified tables/plots into the report and prepare the demo.
+3. Treat two-to-five-person cases and uncertain perception as explicit future
+   scope extensions, with separate development and evaluation protocols.
+4. Preserve the frozen comparison and require review before merging into `main`.
 
 Official references:
 - [TurtleBot3 Burger model](https://github.com/cyberbotics/webots/blob/d42e42bfe9a9f3c634cf318d9452eb92c487625a/projects/robots/robotis/turtlebot/protos/TurtleBot3Burger.proto)

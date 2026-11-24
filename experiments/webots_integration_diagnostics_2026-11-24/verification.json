@@ -1,0 +1,168 @@
+{
+  "phase": "development_diagnostics",
+  "base_integration_commit": "0627669",
+  "seed": 3,
+  "n_runs": 10,
+  "results": {
+    "reactive": [
+      {
+        "scenario": "empty",
+        "seed": 3,
+        "planner": "reactive",
+        "outcome": "success",
+        "elapsed_s": 29.248,
+        "path_length_m": 5.755080122340433,
+        "waiting_s": 0.0,
+        "min_pedestrian_clearance_m": null,
+        "min_obstacle_clearance_m": 1.159945969452738,
+        "clearance_violation": false,
+        "events_reached": {},
+        "collision_definition": "conservative circle overlap or walkway wall overlap"
+      },
+      {
+        "scenario": "static",
+        "seed": 3,
+        "planner": "reactive",
+        "outcome": "success",
+        "elapsed_s": 32.31999999999999,
+        "path_length_m": 5.9800497576050065,
+        "waiting_s": 0.0,
+        "min_pedestrian_clearance_m": null,
+        "min_obstacle_clearance_m": 0.3101564189987496,
+        "clearance_violation": false,
+        "events_reached": {},
+        "collision_definition": "conservative circle overlap or walkway wall overlap"
+      },
+      {
+        "scenario": "crossing",
+        "seed": 3,
+        "planner": "reactive",
+        "outcome": "success",
+        "elapsed_s": 54.592,
+        "path_length_m": 5.775255290846476,
+        "waiting_s": 0.128,
+        "min_pedestrian_clearance_m": 0.31448469883553043,
+        "min_obstacle_clearance_m": 0.9938521000089385,
+        "clearance_violation": false,
+        "events_reached": {},
+        "collision_definition": "conservative circle overlap or walkway wall overlap"
+      },
+      {
+        "scenario": "oncoming",
+        "seed": 3,
+        "planner": "reactive",
+        "outcome": "success",
+        "elapsed_s": 35.584,
+        "path_length_m": 6.087415517963567,
+        "waiting_s": 0.0,
+        "min_pedestrian_clearance_m": 0.3027973448737872,
+        "min_obstacle_clearance_m": 0.4325932888509547,
+        "clearance_violation": false,
+        "events_reached": {},
+        "collision_definition": "conservative circle overlap or walkway wall overlap"
+      },
+      {
+        "scenario": "stop_turn",
+        "seed": 3,
+        "planner": "reactive",
+        "outcome": "success",
+        "elapsed_s": 67.904,
+        "path_length_m": 6.375423536004574,
+        "waiting_s": 0.0,
+        "min_pedestrian_clearance_m": 0.30388365771829684,
+        "min_obstacle_clearance_m": 0.39998692186493023,
+        "clearance_violation": false,
+        "events_reached": {
+          "pedestrian_0_stops": true,
+          "pedestrian_0_turns": true,
+          "pedestrian_0_finishes": true
+        },
+        "collision_definition": "conservative circle overlap or walkway wall overlap"
+      }
+    ],
+    "predictive": [
+      {
+        "scenario": "empty",
+        "seed": 3,
+        "planner": "predictive",
+        "outcome": "success",
+        "elapsed_s": 29.248,
+        "path_length_m": 5.755080122340433,
+        "waiting_s": 0.0,
+        "min_pedestrian_clearance_m": null,
+        "min_obstacle_clearance_m": 1.159945969452738,
+        "clearance_violation": false,
+        "events_reached": {},
+        "collision_definition": "conservative circle overlap or walkway wall overlap"
+      },
+      {
+        "scenario": "static",
+        "seed": 3,
+        "planner": "predictive",
+        "outcome": "success",
+        "elapsed_s": 32.31999999999999,
+        "path_length_m": 5.9800497576050065,
+        "waiting_s": 0.0,
+        "min_pedestrian_clearance_m": null,
+        "min_obstacle_clearance_m": 0.3101564189987496,
+        "clearance_violation": false,
+        "events_reached": {},
+        "collision_definition": "conservative circle overlap or walkway wall overlap"
+      },
+      {
+        "scenario": "crossing",
+        "seed": 3,
+        "planner": "predictive",
+        "outcome": "success",
+        "elapsed_s": 54.72,
+        "path_length_m": 5.775144136906141,
+        "waiting_s": 0.064,
+        "min_pedestrian_clearance_m": 0.32737405245326423,
+        "min_obstacle_clearance_m": 0.9935207983464526,
+        "clearance_violation": false,
+        "events_reached": {},
+        "collision_definition": "conservative circle overlap or walkway wall overlap"
+      },
+      {
+        "scenario": "oncoming",
+        "seed": 3,
+        "planner": "predictive",
+        "outcome": "success",
+        "elapsed_s": 35.58400000000002,
+        "path_length_m": 6.087731046835288,
+        "waiting_s": 0.0,
+        "min_pedestrian_clearance_m": 0.30316889667326596,
+        "min_obstacle_clearance_m": 0.432175166655155,
+        "clearance_violation": false,
+        "events_reached": {},
+        "collision_definition": "conservative circle overlap or walkway wall overlap"
+      },
+      {
+        "scenario": "stop_turn",
+        "seed": 3,
+        "planner": "predictive",
+        "outcome": "success",
+        "elapsed_s": 67.83999999999997,
+        "path_length_m": 6.3612148533434185,
+        "waiting_s": 0.0,
+        "min_pedestrian_clearance_m": 0.31337388715163106,
+        "min_obstacle_clearance_m": 0.4013729418544806,
+        "clearance_violation": false,
+        "events_reached": {
+          "pedestrian_0_stops": true,
+          "pedestrian_0_turns": true,
+          "pedestrian_0_finishes": true
+        },
+        "collision_definition": "conservative circle overlap or walkway wall overlap"
+      }
+    ]
+  },
+  "max_initial_pose_difference_by_family": {
+    "00_empty_seed3": 0.0,
+    "01_static_seed3": 0.0,
+    "02_crossing_seed3": 0.0,
+    "03_oncoming_seed3": 4.0940900497522196e-11,
+    "04_stop_turn_seed3": 2.7387690210556026e-10
+  },
+  "archive_sha256": "2d078f506804434fc17c45e8efd6d709a90669d310eb9c380dee20da70c3cd62"
+}

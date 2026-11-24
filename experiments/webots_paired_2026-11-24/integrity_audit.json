@@ -1,0 +1,1629 @@
+{
+  "trials": [
+    {
+      "family": "crossing",
+      "seed": 6000,
+      "planner": "reactive",
+      "samples": 858,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6000,
+      "planner": "predictive",
+      "samples": 858,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6000,
+      "planner": "reactive",
+      "samples": 549,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6000,
+      "planner": "predictive",
+      "samples": 549,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6000,
+      "planner": "reactive",
+      "samples": 1047,
+      "max_pedestrian_script_error_m": 1.3322676295501878e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6000,
+      "planner": "predictive",
+      "samples": 1047,
+      "max_pedestrian_script_error_m": 1.3322676295501878e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6001,
+      "planner": "reactive",
+      "samples": 845,
+      "max_pedestrian_script_error_m": 1.1102230246251565e-15,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6001,
+      "planner": "predictive",
+      "samples": 843,
+      "max_pedestrian_script_error_m": 1.1102230246251565e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6001,
+      "planner": "reactive",
+      "samples": 559,
+      "max_pedestrian_script_error_m": 1.3322676295501878e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6001,
+      "planner": "predictive",
+      "samples": 568,
+      "max_pedestrian_script_error_m": 1.3322676295501878e-15,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6001,
+      "planner": "reactive",
+      "samples": 1064,
+      "max_pedestrian_script_error_m": 1.4432899320127035e-15,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6001,
+      "planner": "predictive",
+      "samples": 1070,
+      "max_pedestrian_script_error_m": 1.4432899320127035e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6002,
+      "planner": "reactive",
+      "samples": 855,
+      "max_pedestrian_script_error_m": 9.992007221626409e-16,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6002,
+      "planner": "predictive",
+      "samples": 856,
+      "max_pedestrian_script_error_m": 9.992007221626409e-16,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6002,
+      "planner": "reactive",
+      "samples": 551,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6002,
+      "planner": "predictive",
+      "samples": 555,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6002,
+      "planner": "reactive",
+      "samples": 1046,
+      "max_pedestrian_script_error_m": 1.3322676295501878e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6002,
+      "planner": "predictive",
+      "samples": 1046,
+      "max_pedestrian_script_error_m": 1.3322676295501878e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6003,
+      "planner": "reactive",
+      "samples": 841,
+      "max_pedestrian_script_error_m": 1.1102230246251565e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6003,
+      "planner": "predictive",
+      "samples": 843,
+      "max_pedestrian_script_error_m": 1.1102230246251565e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6003,
+      "planner": "reactive",
+      "samples": 552,
+      "max_pedestrian_script_error_m": 1.3322676295501878e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6003,
+      "planner": "predictive",
+      "samples": 557,
+      "max_pedestrian_script_error_m": 1.3322676295501878e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6003,
+      "planner": "reactive",
+      "samples": 1068,
+      "max_pedestrian_script_error_m": 1.4155343563970746e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6003,
+      "planner": "predictive",
+      "samples": 1070,
+      "max_pedestrian_script_error_m": 1.4155343563970746e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6004,
+      "planner": "reactive",
+      "samples": 855,
+      "max_pedestrian_script_error_m": 1.1102230246251565e-15,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6004,
+      "planner": "predictive",
+      "samples": 855,
+      "max_pedestrian_script_error_m": 1.1102230246251565e-15,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6004,
+      "planner": "reactive",
+      "samples": 554,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6004,
+      "planner": "predictive",
+      "samples": 556,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6004,
+      "planner": "reactive",
+      "samples": 1051,
+      "max_pedestrian_script_error_m": 1.4432899320127035e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6004,
+      "planner": "predictive",
+      "samples": 1051,
+      "max_pedestrian_script_error_m": 1.4432899320127035e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6005,
+      "planner": "reactive",
+      "samples": 851,
+      "max_pedestrian_script_error_m": 7.771561172376096e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6005,
+      "planner": "predictive",
+      "samples": 851,
+      "max_pedestrian_script_error_m": 7.771561172376096e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6005,
+      "planner": "reactive",
+      "samples": 546,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6005,
+      "planner": "predictive",
+      "samples": 546,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6005,
+      "planner": "reactive",
+      "samples": 1068,
+      "max_pedestrian_script_error_m": 1.4155343563970746e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6005,
+      "planner": "predictive",
+      "samples": 1071,
+      "max_pedestrian_script_error_m": 1.4155343563970746e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6006,
+      "planner": "reactive",
+      "samples": 855,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6006,
+      "planner": "predictive",
+      "samples": 856,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6006,
+      "planner": "reactive",
+      "samples": 556,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6006,
+      "planner": "predictive",
+      "samples": 556,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6006,
+      "planner": "reactive",
+      "samples": 1055,
+      "max_pedestrian_script_error_m": 1.4432899320127035e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6006,
+      "planner": "predictive",
+      "samples": 1055,
+      "max_pedestrian_script_error_m": 1.4432899320127035e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6007,
+      "planner": "reactive",
+      "samples": 847,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6007,
+      "planner": "predictive",
+      "samples": 850,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6007,
+      "planner": "reactive",
+      "samples": 543,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6007,
+      "planner": "predictive",
+      "samples": 543,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6007,
+      "planner": "reactive",
+      "samples": 1071,
+      "max_pedestrian_script_error_m": 1.429412144204889e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6007,
+      "planner": "predictive",
+      "samples": 1072,
+      "max_pedestrian_script_error_m": 1.429412144204889e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6008,
+      "planner": "reactive",
+      "samples": 850,
+      "max_pedestrian_script_error_m": 1.1102230246251565e-15,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6008,
+      "planner": "predictive",
+      "samples": 851,
+      "max_pedestrian_script_error_m": 1.1102230246251565e-15,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6008,
+      "planner": "reactive",
+      "samples": 568,
+      "max_pedestrian_script_error_m": 1.7763568394002505e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6008,
+      "planner": "predictive",
+      "samples": 580,
+      "max_pedestrian_script_error_m": 1.7763568394002505e-15,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6008,
+      "planner": "reactive",
+      "samples": 1060,
+      "max_pedestrian_script_error_m": 1.4432899320127035e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6008,
+      "planner": "predictive",
+      "samples": 1060,
+      "max_pedestrian_script_error_m": 1.4432899320127035e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6009,
+      "planner": "reactive",
+      "samples": 847,
+      "max_pedestrian_script_error_m": 9.992007221626409e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6009,
+      "planner": "predictive",
+      "samples": 847,
+      "max_pedestrian_script_error_m": 9.992007221626409e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6009,
+      "planner": "reactive",
+      "samples": 550,
+      "max_pedestrian_script_error_m": 1.3322676295501878e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6009,
+      "planner": "predictive",
+      "samples": 553,
+      "max_pedestrian_script_error_m": 1.3322676295501878e-15,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6009,
+      "planner": "reactive",
+      "samples": 1066,
+      "max_pedestrian_script_error_m": 1.4432899320127035e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6009,
+      "planner": "predictive",
+      "samples": 1068,
+      "max_pedestrian_script_error_m": 1.4432899320127035e-15,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6010,
+      "planner": "reactive",
+      "samples": 856,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6010,
+      "planner": "predictive",
+      "samples": 856,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6010,
+      "planner": "reactive",
+      "samples": 549,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6010,
+      "planner": "predictive",
+      "samples": 549,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6010,
+      "planner": "reactive",
+      "samples": 1049,
+      "max_pedestrian_script_error_m": 1.5543122344752192e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6010,
+      "planner": "predictive",
+      "samples": 1048,
+      "max_pedestrian_script_error_m": 1.5543122344752192e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6011,
+      "planner": "reactive",
+      "samples": 855,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6011,
+      "planner": "predictive",
+      "samples": 855,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6011,
+      "planner": "reactive",
+      "samples": 555,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6011,
+      "planner": "predictive",
+      "samples": 555,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6011,
+      "planner": "reactive",
+      "samples": 1056,
+      "max_pedestrian_script_error_m": 1.4432899320127035e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6011,
+      "planner": "predictive",
+      "samples": 1055,
+      "max_pedestrian_script_error_m": 1.4432899320127035e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6012,
+      "planner": "reactive",
+      "samples": 846,
+      "max_pedestrian_script_error_m": 1.1102230246251565e-15,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6012,
+      "planner": "predictive",
+      "samples": 851,
+      "max_pedestrian_script_error_m": 1.1102230246251565e-15,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6012,
+      "planner": "reactive",
+      "samples": 564,
+      "max_pedestrian_script_error_m": 1.7763568394002505e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6012,
+      "planner": "predictive",
+      "samples": 574,
+      "max_pedestrian_script_error_m": 1.7763568394002505e-15,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6012,
+      "planner": "reactive",
+      "samples": 1064,
+      "max_pedestrian_script_error_m": 1.4432899320127035e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6012,
+      "planner": "predictive",
+      "samples": 1063,
+      "max_pedestrian_script_error_m": 1.4432899320127035e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6013,
+      "planner": "reactive",
+      "samples": 855,
+      "max_pedestrian_script_error_m": 1.1102230246251565e-15,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6013,
+      "planner": "predictive",
+      "samples": 854,
+      "max_pedestrian_script_error_m": 1.1102230246251565e-15,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6013,
+      "planner": "reactive",
+      "samples": 552,
+      "max_pedestrian_script_error_m": 1.3322676295501878e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6013,
+      "planner": "predictive",
+      "samples": 555,
+      "max_pedestrian_script_error_m": 1.3322676295501878e-15,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6013,
+      "planner": "reactive",
+      "samples": 1047,
+      "max_pedestrian_script_error_m": 1.5543122344752192e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6013,
+      "planner": "predictive",
+      "samples": 1047,
+      "max_pedestrian_script_error_m": 1.5543122344752192e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6014,
+      "planner": "reactive",
+      "samples": 850,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6014,
+      "planner": "predictive",
+      "samples": 853,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6014,
+      "planner": "reactive",
+      "samples": 561,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6014,
+      "planner": "predictive",
+      "samples": 567,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6014,
+      "planner": "reactive",
+      "samples": 1063,
+      "max_pedestrian_script_error_m": 1.3322676295501878e-15,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6014,
+      "planner": "predictive",
+      "samples": 1063,
+      "max_pedestrian_script_error_m": 1.3322676295501878e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6015,
+      "planner": "reactive",
+      "samples": 856,
+      "max_pedestrian_script_error_m": 1.1102230246251565e-15,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6015,
+      "planner": "predictive",
+      "samples": 856,
+      "max_pedestrian_script_error_m": 1.1102230246251565e-15,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6015,
+      "planner": "reactive",
+      "samples": 553,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6015,
+      "planner": "predictive",
+      "samples": 558,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6015,
+      "planner": "reactive",
+      "samples": 1046,
+      "max_pedestrian_script_error_m": 1.5543122344752192e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6015,
+      "planner": "predictive",
+      "samples": 1046,
+      "max_pedestrian_script_error_m": 1.5543122344752192e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6016,
+      "planner": "reactive",
+      "samples": 848,
+      "max_pedestrian_script_error_m": 9.992007221626409e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6016,
+      "planner": "predictive",
+      "samples": 856,
+      "max_pedestrian_script_error_m": 9.992007221626409e-16,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6016,
+      "planner": "reactive",
+      "samples": 555,
+      "max_pedestrian_script_error_m": 1.7763568394002505e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6016,
+      "planner": "predictive",
+      "samples": 559,
+      "max_pedestrian_script_error_m": 1.7763568394002505e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6016,
+      "planner": "reactive",
+      "samples": 1064,
+      "max_pedestrian_script_error_m": 1.4432899320127035e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6016,
+      "planner": "predictive",
+      "samples": 1071,
+      "max_pedestrian_script_error_m": 1.4432899320127035e-15,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6017,
+      "planner": "reactive",
+      "samples": 848,
+      "max_pedestrian_script_error_m": 9.992007221626409e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6017,
+      "planner": "predictive",
+      "samples": 849,
+      "max_pedestrian_script_error_m": 9.992007221626409e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6017,
+      "planner": "reactive",
+      "samples": 548,
+      "max_pedestrian_script_error_m": 1.3322676295501878e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6017,
+      "planner": "predictive",
+      "samples": 548,
+      "max_pedestrian_script_error_m": 1.3322676295501878e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6017,
+      "planner": "reactive",
+      "samples": 1066,
+      "max_pedestrian_script_error_m": 1.3877787807814457e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6017,
+      "planner": "predictive",
+      "samples": 1069,
+      "max_pedestrian_script_error_m": 1.3877787807814457e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6018,
+      "planner": "reactive",
+      "samples": 853,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6018,
+      "planner": "predictive",
+      "samples": 855,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6018,
+      "planner": "reactive",
+      "samples": 558,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6018,
+      "planner": "predictive",
+      "samples": 560,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6018,
+      "planner": "reactive",
+      "samples": 1058,
+      "max_pedestrian_script_error_m": 1.3322676295501878e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6018,
+      "planner": "predictive",
+      "samples": 1058,
+      "max_pedestrian_script_error_m": 1.3322676295501878e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6019,
+      "planner": "reactive",
+      "samples": 854,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6019,
+      "planner": "predictive",
+      "samples": 857,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 2.7755575615628914e-17,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6019,
+      "planner": "reactive",
+      "samples": 559,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6019,
+      "planner": "predictive",
+      "samples": 559,
+      "max_pedestrian_script_error_m": 8.881784197001252e-16,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6019,
+      "planner": "reactive",
+      "samples": 1061,
+      "max_pedestrian_script_error_m": 1.3322676295501878e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6019,
+      "planner": "predictive",
+      "samples": 1061,
+      "max_pedestrian_script_error_m": 1.3322676295501878e-15,
+      "max_command_limit_violation": 3.469446951953614e-18,
+      "raw_metrics_verified": true
+    }
+  ],
+  "pairs": [
+    {
+      "family": "crossing",
+      "seed": 6000,
+      "scenario_sha256": "99d7928a44b5042e080aabe6d8ac1011d385076cce0e833a7de39705ad186204",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6000,
+      "scenario_sha256": "f39a575257072c9b38a9f063bc9cfa27e6cdc6c094eb562756c855f5960eb415",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6000,
+      "scenario_sha256": "54cd044467d7a8bdcceff4d257658cb85ab308b7ecb5bf8ed777319a245c0724",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6001,
+      "scenario_sha256": "d79bc19f21ad5ad8e4a0651583b3c58ea6c67b2a916b923eaeaf6006f97b4bb3",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6001,
+      "scenario_sha256": "7f37d1e0423dbdd1460147e1ecee25d870ad8af2f41a761ac23e4b0f0358e429",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6001,
+      "scenario_sha256": "8c64101cdf165973f8d4412b00fffea292f69871dc82dbecac82df736fdeccc7",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6002,
+      "scenario_sha256": "573527e97233e82d786e8892f82aa8d294fec399ef6a410925e90695e0051d59",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6002,
+      "scenario_sha256": "921e355e53be25acd32d4d4708b7d2c5dd5189c7be5c196b7227ce0999f3815f",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6002,
+      "scenario_sha256": "cfb9a633ca3176371318c9655fd1679229bd2b0214070e371a6da3bb05fa6fdd",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6003,
+      "scenario_sha256": "289694475da48925cfff981edbeddd7a7c6b364b917fd572c6cf2e1f8c88d36d",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6003,
+      "scenario_sha256": "e9738dc5bc0790bb06ea941289fd295d29622e3550c2e4d986bf01f6861899ac",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6003,
+      "scenario_sha256": "528d8f446aba2be53fbafa3071aa34e2aa05a093a2683d05a6960650d827fe15",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6004,
+      "scenario_sha256": "9ec06006c0889bddc40bba51bd4841a268b191841ffd849b1258d900d31132a5",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6004,
+      "scenario_sha256": "afbb4c2cfd9ec617e9bdcc6b0dc79ed2a77506d77c9be0c181d78a11ea868c2b",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6004,
+      "scenario_sha256": "c0469402fcd32732141805b928d808dac48601631d6696857a90522bca23722d",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6005,
+      "scenario_sha256": "a826ae3a8125694352e69f77574cd1e95cbc250259644777215fe860cada64d2",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6005,
+      "scenario_sha256": "cf508de375ff94b54c07c02a55a2f5dcab973ac433e802a0356139d5fb6d9905",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6005,
+      "scenario_sha256": "2b19d40ab4f1d1d417c5fd982c3159bfad592b8ec6cf78762f3a666fb7a431b8",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6006,
+      "scenario_sha256": "ae7837fdea4cebd39a5771fdcfce11366c8498954d5ba9a6a67006dafd77b39f",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6006,
+      "scenario_sha256": "58354bfe174eeab4ee0c119ba4d716a09651fe89018a3414b20e3810f0fe4bf5",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6006,
+      "scenario_sha256": "876897d1f8c2604a96dbe00479c3b8c6398fd39da087936d97497320d5c28874",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6007,
+      "scenario_sha256": "e18967497b00e34c131c0cf9f5593333920340ed75d341aa3eaa5fef75461387",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6007,
+      "scenario_sha256": "16f7326040da261f0b1873b32b0f44dd10c9e414277c0239b9286e9db4aa978f",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6007,
+      "scenario_sha256": "d40e8173971f015a1f2c73684cf3ef6aec21d7f88f7913322b98678464568ca3",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6008,
+      "scenario_sha256": "78450e0157a5298196805476f1a1a86d6d8a65222308fe3cd7a0f1a6eb4fd4f5",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6008,
+      "scenario_sha256": "ce59c1688a7b8a9d3cec843561ba28b6641cfc44e9b5f885852c4b95c0458db0",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6008,
+      "scenario_sha256": "da2de67bf0a0bd6ce96d027ccf98ba8fccefe146138b5238fbc9c10f8f22d6b0",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6009,
+      "scenario_sha256": "188110b985fdc52ca15e69750f898cbb13790f7d54ca7e0c1cbf10c00f5f4b55",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6009,
+      "scenario_sha256": "e58f3c1432ebbbc1a6ba39077cc3a83ae9d748c5782800d53c8a0e006c3646f3",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6009,
+      "scenario_sha256": "d7a247af7aeaaed1f5b21f5ca05bd2ff116ce6dd8a9160dc18046bb37762f26f",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6010,
+      "scenario_sha256": "2b1880e63da2eb18a11668a07d93d463dfdb3cfeae88cbdd9e9c0b35d454cf56",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6010,
+      "scenario_sha256": "57cd9df9bd69c3cd9b955523cf942e73553923d4da2f94d3540eeb36b3505fb2",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6010,
+      "scenario_sha256": "82fc0c06b04cd20bc3d6eecbc307520d781dc64fbe15621bac2810c765d62621",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6011,
+      "scenario_sha256": "ac10e126b524b7b08d48352e1aace548734988df00d5a7c564ac54d5c6d3b8e5",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6011,
+      "scenario_sha256": "f8b545d722dbc41e48abc2970e1005d8f0f2ac7f4e5656848687c494c8a28fa3",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6011,
+      "scenario_sha256": "89d229382872af637f4d391a5e1f6e2aabc0e90ad01da33d3fd86043876858a0",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6012,
+      "scenario_sha256": "a6fb54f86cf9742e7af6ed6a232b037008d36aa1f1a6e5484ea801fe7195b214",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6012,
+      "scenario_sha256": "e73a2652aeb7f5a475343d9bfc0ff9ff61a2d256cc480657bd1ea70af9ef51cb",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6012,
+      "scenario_sha256": "3e08ac738abe9a8aea7204d01954b12ecd02884eebd26c9a1a5dddeac1f1873d",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6013,
+      "scenario_sha256": "a5f84c99cc6f27e18ee7b1b806b13d9f43e18be562ae0af809fa4796c0ba6017",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6013,
+      "scenario_sha256": "c0a590d4e6a1b993d932244ff91f975cb1f3b8283fdd310373386afac455f71c",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6013,
+      "scenario_sha256": "e58ab46a689ef73c01c3f45f8a2884cf30a2b0cfc6a551c221d494ce743aa6ca",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6014,
+      "scenario_sha256": "da3adb0c0bb468eeb5019f98999cc2383221f19748eb72e751d7421c39002efe",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6014,
+      "scenario_sha256": "83a33317879a761096177bfdb99238b92eb2012d20681d42da2b0262362dacbe",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6014,
+      "scenario_sha256": "a6037060c3429595bdb44fb77e8c6b4777c4118defe6f9bf253c7b4fa7aac009",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6015,
+      "scenario_sha256": "ed6857872af68758ac2f699dbd109c500e15f863593ba71d8d713c3f729db2aa",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6015,
+      "scenario_sha256": "7301df0dc2f9c342b4efd5fec04ff2be5a1ec4f2f05df0ca3e1f185fe7c89896",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6015,
+      "scenario_sha256": "8ba525fdcfceafd0670c5ca84926c54e7d087c6c2142437f48056d4092fbded9",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6016,
+      "scenario_sha256": "cf53f72b03f94fcfd00536f96dae50832696d8cf786506452eb8b0b8c2b5c040",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6016,
+      "scenario_sha256": "03be4c07ee745ed0363ed658a391f71e472b3488f1a6c6d1715166f3a8546e95",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6016,
+      "scenario_sha256": "b5944e16bd788c16009959a8bbbd1934667417c5decfe81f0a574ea4f4acb710",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6017,
+      "scenario_sha256": "9aac5782f5eb3eb2261c40db280dddd12e1225958cfff3e31b50fce6bb3bd55a",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6017,
+      "scenario_sha256": "20c01021daebabeef854781eb4194ccb1ce77629c5cc6640747ba4c9e77cf103",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6017,
+      "scenario_sha256": "5ad5f953abd34393b8314d9fbc005fffab21de355502a32619fd9fe2bb545360",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6018,
+      "scenario_sha256": "95a2eb5a32659d63ac15a8c368c964760a5cb19031c5931087479bdc7dc6890e",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6018,
+      "scenario_sha256": "c5e5fa58c7a15d08d42ff9d925af1c0412a6c57a1fcfd042d85758c45dc856fb",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6018,
+      "scenario_sha256": "6bcf0e895aabdde9fdb0d156b2e52329a0754c27a7e8c1b96367fd4bbdfec31b",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "crossing",
+      "seed": 6019,
+      "scenario_sha256": "ff5742c5932d293b7133381ece9aaf918e96d562e58dbee727dc11031622f4a4",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "oncoming",
+      "seed": 6019,
+      "scenario_sha256": "30a338329dcf2ae771b9aaabd2dd2b2e30c942d2d2164bafd52a0550579bfd0f",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    },
+    {
+      "family": "stop_turn",
+      "seed": 6019,
+      "scenario_sha256": "9d4c228e9611c29249a4116bec5a82b4d663a4386ffb02d8c6f1236f8dcd275e",
+      "max_initial_state_difference": 0.0,
+      "identical_configuration": true,
+      "identical_source": true,
+      "identical_environment": true
+    }
+  ],
+  "source_manifest_signature": "3344fec090f51d9dc9c4297e8d9a8b353621ca15b89089bede80899c8cdd85b0",
+  "max_initial_state_difference": 0.0,
+  "all_raw_metrics_verified": true
+}

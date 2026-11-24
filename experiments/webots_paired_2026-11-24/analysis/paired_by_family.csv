@@ -1,0 +1,7 @@
+family,planner,n,success_n,collision_n,timeout_n,near_margin_n,median_wait_all_s,both_success_pairs,predictive_only_success_pairs,reactive_only_success_pairs,median_paired_pred_minus_reactive_time_s,median_paired_pred_minus_reactive_path_m,median_paired_pred_minus_reactive_wait_s
+crossing,reactive,20,20,0,0,0,0.128,20,0,0,0.06400000000000006,0.001472647129538096,0.0
+crossing,predictive,20,20,0,0,0,0.064,20,0,0,0.06400000000000006,0.001472647129538096,0.0
+oncoming,reactive,20,20,0,0,2,0.7040000000000002,20,0,0,0.16000000000000014,0.0012179432594821016,0.6080000000000005
+oncoming,predictive,20,20,0,0,3,1.3120000000000007,20,0,0,0.16000000000000014,0.0012179432594821016,0.6080000000000005
+stop_turn,reactive,20,20,0,0,0,0.064,20,0,0,0.0,-0.0012847568979443835,0.0
+stop_turn,predictive,20,20,0,0,0,0.0,20,0,0,0.0,-0.0012847568979443835,0.0
